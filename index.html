@@ -106,6 +106,11 @@ async function init() {
         <input class="search" id="tgt-q" placeholder="Search companies..." oninput="filterTargets(this.value)">
         <div class="tbl-wrap" id="tgt-tbl"></div>
       </div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <div class="card-hd">By Company <span style="font-size:12px;color:#8c959f;font-weight:400" id="co-ct"></span></div>
+      <input class="search" id="co-q" placeholder="Search companies..." oninput="filterCompanies(this.value)">
+      <div class="tbl-wrap" id="co-tbl"></div>
     </div>`;
 
   // Charts
@@ -128,9 +133,11 @@ async function init() {
 
   renderApps(d.apps);
   renderTargets(ALL_TARGETS);
+  renderCompanies(d.byCompany || {});
 
   // store apps on window for filter
   window._apps = d.apps;
+  window._byCompany = d.byCompany || {};
 }
 
 function statusBadge(s) {
@@ -171,6 +178,31 @@ function renderTargets(targets) {
 function filterTargets(q) {
   const ql = q.toLowerCase();
   renderTargets(ql ? ALL_TARGETS.filter(t => t.Company.toLowerCase().includes(ql)||(t.Sector||'').toLowerCase().includes(ql)) : ALL_TARGETS);
+}
+
+function renderCompanies(byCompany) {
+  const rows = Object.entries(byCompany).sort((a,b) => b[1].total - a[1].total);
+  document.getElementById('co-ct').textContent = rows.length + ' companies';
+  document.getElementById('co-tbl').innerHTML = `<table class="tbl">
+    <thead><tr><th>Company</th><th>Total Roles</th><th>Applied</th><th>Rejected</th><th>Other</th></tr></thead>
+    <tbody>${rows.map(([co, v]) => {
+      const other = v.total - v.applied - v.rejected;
+      return `<tr>
+        <td style="font-weight:500">${co}</td>
+        <td>${v.total}</td>
+        <td>${v.applied > 0 ? `<span class="badge" style="background:#fff8c5;color:#9a6700;border:1px solid #d4a72c">${v.applied}</span>` : '—'}</td>
+        <td>${v.rejected > 0 ? `<span class="badge" style="background:#ffebe9;color:#cf222e;border:1px solid #ff8182">${v.rejected}</span>` : '—'}</td>
+        <td style="color:#656d76">${other > 0 ? other : '—'}</td>
+      </tr>`;
+    }).join('')}</tbody></table>`;
+}
+
+function filterCompanies(q) {
+  const ql = q.toLowerCase();
+  const filtered = ql
+    ? Object.fromEntries(Object.entries(window._byCompany).filter(([co]) => co.toLowerCase().includes(ql)))
+    : window._byCompany;
+  renderCompanies(filtered);
 }
 
 init();
