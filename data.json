@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T22:00:26.611931",
+  "generated": "2026-06-29T22:14:54.774577",
   "stats": {
     "total": 59,
     "applied": 42,
@@ -37,6 +37,163 @@
     "Gaming": 1,
     "Other": 7,
     "Crypto": 2
+  },
+  "byCompany": {
+    "Nooks": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Sieve": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Robinhood": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Merge": {
+      "total": 1,
+      "applied": 0,
+      "rejected": 1
+    },
+    "Blossom Health": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "LiveRamp": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Auctor": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Palantir": {
+      "total": 3,
+      "applied": 2,
+      "rejected": 1
+    },
+    "Twilio": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Braze": {
+      "total": 1,
+      "applied": 0,
+      "rejected": 1
+    },
+    "Okta": {
+      "total": 1,
+      "applied": 0,
+      "rejected": 1
+    },
+    "Amazon": {
+      "total": 10,
+      "applied": 2,
+      "rejected": 8
+    },
+    "JPMorgan Chase": {
+      "total": 2,
+      "applied": 2,
+      "rejected": 0
+    },
+    "Visa": {
+      "total": 3,
+      "applied": 2,
+      "rejected": 1
+    },
+    "Oracle": {
+      "total": 3,
+      "applied": 1,
+      "rejected": 2
+    },
+    "American Express": {
+      "total": 2,
+      "applied": 2,
+      "rejected": 0
+    },
+    "Jerry.ai": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Plaid": {
+      "total": 1,
+      "applied": 0,
+      "rejected": 1
+    },
+    "Linear": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Chime": {
+      "total": 4,
+      "applied": 4,
+      "rejected": 0
+    },
+    "CrowdStrike": {
+      "total": 1,
+      "applied": 0,
+      "rejected": 1
+    },
+    "Brex": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Asana": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "ZipRecruiter": {
+      "total": 2,
+      "applied": 2,
+      "rejected": 0
+    },
+    "Figma": {
+      "total": 2,
+      "applied": 2,
+      "rejected": 0
+    },
+    "PrizePicks": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Replit": {
+      "total": 3,
+      "applied": 3,
+      "rejected": 0
+    },
+    "Cloudflare": {
+      "total": 1,
+      "applied": 1,
+      "rejected": 0
+    },
+    "Databricks": {
+      "total": 3,
+      "applied": 3,
+      "rejected": 0
+    },
+    "Ramp": {
+      "total": 2,
+      "applied": 2,
+      "rejected": 0
+    },
+    "Coinbase": {
+      "total": 2,
+      "applied": 2,
+      "rejected": 0
+    }
   },
   "apps": [
     {
