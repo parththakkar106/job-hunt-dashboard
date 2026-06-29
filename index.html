@@ -242,17 +242,15 @@ function renderCompanies(byCompany) {
   const rows = Object.entries(byCompany).sort((a,b) => b[1].total - a[1].total);
   document.getElementById('co-ct').textContent = rows.length + ' companies';
   document.getElementById('co-tbl').innerHTML = `<table class="tbl">
-    <thead><tr><th>Company</th><th>Total Roles</th><th>Applied</th><th>Rejected</th><th>Other</th></tr></thead>
-    <tbody>${rows.map(([co, v]) => {
-      const other = v.total - v.applied - v.rejected;
-      return `<tr>
-        <td style="font-weight:500">${co}</td>
-        <td>${v.total}</td>
-        <td>${v.applied > 0 ? `<span class="badge" style="background:#fff8c5;color:#9a6700;border:1px solid #d4a72c">${v.applied}</span>` : '—'}</td>
-        <td>${v.rejected > 0 ? `<span class="badge" style="background:#ffebe9;color:#cf222e;border:1px solid #ff8182">${v.rejected}</span>` : '—'}</td>
-        <td style="color:#656d76">${other > 0 ? other : '—'}</td>
-      </tr>`;
-    }).join('')}</tbody></table>`;
+    <thead><tr><th>Company</th><th>Applied</th><th>Action Req</th><th>In Progress</th><th>Rejected</th><th>Other</th></tr></thead>
+    <tbody>${rows.map(([co, v]) => `<tr>
+      <td style="font-weight:500">${co}</td>
+      <td>${v.applied > 0 ? `<span class="badge" style="background:#fff8c5;color:#9a6700;border:1px solid #d4a72c">${v.applied}</span>` : '—'}</td>
+      <td>${v.actionRequired > 0 ? `<span class="badge" style="background:#dafbe1;color:#1a7f37;border:1px solid #4ac26b">${v.actionRequired}</span>` : '—'}</td>
+      <td>${v.inProgress > 0 ? `<span class="badge" style="background:#ddf4ff;color:#0969da;border:1px solid #54aff9">${v.inProgress}</span>` : '—'}</td>
+      <td>${v.rejected > 0 ? `<span class="badge" style="background:#ffebe9;color:#cf222e;border:1px solid #ff8182">${v.rejected}</span>` : '—'}</td>
+      <td style="color:#656d76">${v.other > 0 ? v.other : '—'}</td>
+    </tr>`).join('')}</tbody></table>`;
 }
 
 function filterCompanies(q) {
