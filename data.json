@@ -1,11 +1,39 @@
 {
-  "generated": "2026-06-29T22:14:54.774577",
+  "generated": "2026-06-29T22:24:03.045881",
   "stats": {
     "total": 59,
     "applied": 42,
     "rejected": 17,
     "rejectionRate": 29,
     "targetsRemaining": 79
+  },
+  "digest": {
+    "date": "2026-06-29",
+    "actionRequired": [],
+    "todayAdded": [],
+    "todayRejected": [],
+    "todayChanged": [
+      {
+        "Company": "Ramp",
+        "Role": "Software Engineer, Production Engineering",
+        "Status": "Applied"
+      },
+      {
+        "Company": "Ramp",
+        "Role": "Software Engineer, Credit",
+        "Status": "Applied"
+      },
+      {
+        "Company": "Coinbase",
+        "Role": "Software Engineer (Role 1 - unspecified in confirmation)",
+        "Status": "Applied"
+      },
+      {
+        "Company": "Coinbase",
+        "Role": "Software Engineer (Role 2 - unspecified in confirmation)",
+        "Status": "Applied"
+      }
+    ]
   },
   "byDate": {
     "2026-06-18": 1,
