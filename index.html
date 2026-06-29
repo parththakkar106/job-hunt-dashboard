@@ -164,12 +164,17 @@ function buildDigest(dg) {
     : '<div class="digest-empty">Nothing urgent right now</div>';
 
   // Today's activity
+  function groupCompanies(items) {
+    const counts = {};
+    items.forEach(a => { counts[a.Company] = (counts[a.Company] || 0) + 1; });
+    return Object.entries(counts).map(([co, n]) => n > 1 ? `${co} x${n}` : co).join(', ');
+  }
   const parts = [];
   if (dg.todayAdded.length) {
-    parts.push(`<div class="digest-item"><span style="font-weight:600;color:#1a7f37">+${dg.todayAdded.length} applied:</span> ${dg.todayAdded.map(a=>a.Company).join(', ')}</div>`);
+    parts.push(`<div class="digest-item"><span style="font-weight:600;color:#1a7f37">+${dg.todayAdded.length} applied:</span> ${groupCompanies(dg.todayAdded)}</div>`);
   }
   if (dg.todayRejected.length) {
-    parts.push(`<div class="digest-item"><span style="font-weight:600;color:#cf222e">✕ ${dg.todayRejected.length} rejected:</span> ${dg.todayRejected.map(a=>a.Company).join(', ')}</div>`);
+    parts.push(`<div class="digest-item"><span style="font-weight:600;color:#cf222e">✕ ${dg.todayRejected.length} rejected:</span> ${groupCompanies(dg.todayRejected)}</div>`);
   }
   if (dg.todayChanged.length) {
     parts.push(dg.todayChanged.map(a =>
