@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T22:32:46.228920",
+  "generated": "2026-06-29T22:35:30.980551",
   "stats": {
     "total": 59,
     "applied": 42,
@@ -70,157 +70,250 @@
     "Nooks": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Sieve": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Robinhood": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Merge": {
       "total": 1,
       "applied": 0,
-      "rejected": 1
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
     },
     "Blossom Health": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "LiveRamp": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Auctor": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Palantir": {
       "total": 3,
       "applied": 2,
-      "rejected": 1
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
     },
     "Twilio": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Braze": {
       "total": 1,
       "applied": 0,
-      "rejected": 1
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
     },
     "Okta": {
       "total": 1,
       "applied": 0,
-      "rejected": 1
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
     },
     "Amazon": {
       "total": 10,
       "applied": 2,
-      "rejected": 8
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 8,
+      "other": 0
     },
     "JPMorgan Chase": {
       "total": 2,
       "applied": 2,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Visa": {
       "total": 3,
       "applied": 2,
-      "rejected": 1
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
     },
     "Oracle": {
       "total": 3,
       "applied": 1,
-      "rejected": 2
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 2,
+      "other": 0
     },
     "American Express": {
       "total": 2,
       "applied": 2,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Jerry.ai": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Plaid": {
       "total": 1,
       "applied": 0,
-      "rejected": 1
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
     },
     "Linear": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Chime": {
       "total": 4,
       "applied": 4,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "CrowdStrike": {
       "total": 1,
       "applied": 0,
-      "rejected": 1
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
     },
     "Brex": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Asana": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "ZipRecruiter": {
       "total": 2,
       "applied": 2,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Figma": {
       "total": 2,
       "applied": 2,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "PrizePicks": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Replit": {
       "total": 3,
       "applied": 3,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Cloudflare": {
       "total": 1,
       "applied": 1,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Databricks": {
       "total": 3,
       "applied": 3,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Ramp": {
       "total": 2,
       "applied": 2,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     },
     "Coinbase": {
       "total": 2,
       "applied": 2,
-      "rejected": 0
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 0,
+      "other": 0
     }
   },
   "apps": [
