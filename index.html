@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Hunt Dashboard</title>
+<style>
+:root { color-scheme: light; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f6f8fa; color: #1f2328; line-height: 1.5; padding: 20px; }
+
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.header h1 { font-size: 20px; font-weight: 700; }
+.header .sub { font-size: 13px; color: #656d76; margin-top: 3px; }
+.btn { background: #f6f8fa; border: 1px solid #d0d7de; color: #24292f; padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; }
+.btn:hover { background: #eaeef2; }
+
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 20px; }
+.stat { background: #fff; border: 1px solid #d0d7de; border-radius: 10px; padding: 16px; }
+.stat .lbl { font-size: 11px; color: #656d76; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.stat .val { font-size: 28px; font-weight: 700; margin: 6px 0 2px; }
+.stat .sub { font-size: 11px; color: #8c959f; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid-3-2 { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; margin-top: 12px; }
+
+.card { background: #fff; border: 1px solid #d0d7de; border-radius: 10px; padding: 16px; }
+.card-hd { font-size: 14px; font-weight: 600; color: #1f2328; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+.live-badge { font-size: 11px; color: #1a7f37; background: #dafbe1; border: 1px solid #aceebb; padding: 2px 9px; border-radius: 20px; font-weight: 500; }
+
+.chart-wrap { position: relative; height: 200px; }
+
+.email-list { display: flex; flex-direction: column; gap: 8px; max-height: 340px; overflow-y: auto; }
+.email-item { border: 1px solid #d0d7de; border-radius: 8px; padding: 10px 12px; }
+.email-subj { font-size: 13px; font-weight: 600; color: #1f2328; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.email-snip { font-size: 12px; color: #656d76; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 2px 0; }
+.email-meta { font-size: 11px; color: #8c959f; }
+
+.badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.b-applied { background: #ddf4ff; color: #0969da; border: 1px solid #54aff9; }
+.b-rejected { background: #ffebe9; color: #cf222e; border: 1px solid #ff8182; }
+.b-interview { background: #dafbe1; color: #1a7f37; border: 1px solid #4ac26b; }
+.b-offer { background: #fff8c5; color: #9a6700; border: 1px solid #d4a72c; }
+.b-new { background: #f6f8fa; color: #656d76; border: 1px solid #d0d7de; }
+.b-yes { background: #dafbe1; color: #1a7f37; border: 1px solid #4ac26b; font-size:11px; }
+
+.filter-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }
+.ftab { padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; cursor: pointer; border: 1px solid #d0d7de; background: #f6f8fa; color: #656d76; }
+.ftab.active { background: #0969da; color: #fff; border-color: #0969da; }
+
+.tbl-wrap { max-height: 320px; overflow-y: auto; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 12px; }
+.tbl th { text-align: left; color: #656d76; font-weight: 600; padding: 6px 8px; border-bottom: 2px solid #d0d7de; position: sticky; top: 0; background: #fff; z-index: 1; }
+.tbl td { padding: 6px 8px; border-bottom: 1px solid #f6f8fa; }
+.tbl tr:hover td { background: #f6f8fa; }
+
+.search { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 7px 10px; color: #1f2328; font-size: 12px; width: 100%; margin-bottom: 10px; }
+.search:focus { outline: none; border-color: #0969da; box-shadow: 0 0 0 3px rgba(9,105,218,0.12); }
+
+.loading { text-align: center; padding: 32px; color: #8c959f; font-size: 13px; }
+.spin { display: inline-block; width: 16px; height: 16px; border: 2px solid #d0d7de; border-top-color: #0969da; border-radius: 50%; animation: spin 0.8s linear infinite; vertical-align: middle; margin-right: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #d0d7de; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div style="max-width:1400px;margin:0 auto">
+
+  <div class="header">
+    <div>
+      <h1>🎯 Job Hunt Dashboard</h1>
+      <div class="sub">Parth Thakkar · Tracker data + live Gmail</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font-size:12px;color:#8c959f">Updated: <span id="ts"></span></span>
+      <button class="btn" onclick="fullRefresh()">↺ Refresh</button>
+    </div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-hd">Applications Over Time</div>
+      <div class="chart-wrap"><canvas id="ct"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd">By Sector</div>
+      <div class="chart-wrap"><canvas id="cs"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-3-2">
+    <div class="card">
+      <div class="card-hd">Recent Job Emails <span class="live-badge">● Live</span></div>
+      <div class="filter-tabs" id="ftabs"></div>
+      <div id="emails"><div class="loading"><span class="spin"></span>Loading emails...</div></div>
+    </div>
+    <div class="card">
+      <div class="card-hd">Target Companies <span style="font-size:12px;color:#8c959f;font-weight:400" id="tgt-count"></span></div>
+      <input class="search" id="tgt-q" placeholder="Search companies or sector..." oninput="filterTargets(this.value)">
+      <div class="tbl-wrap" id="tbl-tgt"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script>
+const APPS = [{"Company": "Nooks", "Role": "Software Engineer", "Date Applied": "2026-06-18", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": "~400", "Sector": "AI / Sales Tech", "Notes": null, "Next Steps": "Awaiting review", "Last Updated": "2026-06-18"}, {"Company": "Sieve", "Role": "Software Engineer", "Date Applied": "2026-06-17", "Status": "Applied", "Source": "YC Work at a Startup", "Company Size (Employees)": "~15", "Sector": "AI / Video", "Notes": null, "Next Steps": "Awaiting review", "Last Updated": "2026-06-17"}, {"Company": "Robinhood", "Role": "Software Engineer (unspecified)", "Date Applied": "2026-06-17", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~2,900", "Sector": "Fintech", "Notes": null, "Next Steps": "Awaiting review", "Last Updated": "2026-06-17"}, {"Company": "Merge", "Role": "Software Engineer (SF)", "Date Applied": "2026-06-17", "Status": "Rejected", "Source": "Ashby", "Company Size (Employees)": "~100", "Sector": "B2B SaaS / API", "Notes": "Rejected 2026-06-18", "Next Steps": null, "Last Updated": "2026-06-18"}, {"Company": "Blossom Health", "Role": "Software Engineer (All Levels)", "Date Applied": "2026-06-17", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": "~37", "Sector": "HealthTech / Mental Health", "Notes": null, "Next Steps": "Awaiting review", "Last Updated": "2026-06-17"}, {"Company": "LiveRamp", "Role": "Software Engineer", "Date Applied": "2026-06-17", "Status": "Applied", "Source": "Workday", "Company Size (Employees)": "~1,400", "Sector": "AdTech / Data Analytics", "Notes": null, "Next Steps": "Awaiting review", "Last Updated": "2026-06-17"}, {"Company": "Auctor", "Role": "Software Engineer", "Date Applied": "2026-06-17", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": "~11", "Sector": "AI / Enterprise Software", "Notes": null, "Next Steps": "Awaiting review", "Last Updated": "2026-06-17"}, {"Company": "Palantir", "Role": "Forward Deployed AI Engineer", "Date Applied": "2026-06-19", "Status": "Applied", "Source": "Lever", "Company Size (Employees)": "~3,500", "Sector": "Defense / Data Analytics", "Notes": "Applied via Lever", "Next Steps": "Awaiting review", "Last Updated": "2026-06-19"}, {"Company": "Palantir", "Role": "Forward Deployed Software Engineer", "Date Applied": "2026-06-19", "Status": "Applied", "Source": "Lever", "Company Size (Employees)": "~3,500", "Sector": "Defense / Data Analytics", "Notes": "Applied via Lever", "Next Steps": "Awaiting review", "Last Updated": "2026-06-19"}, {"Company": "Palantir", "Role": "Backend Software Engineer - Application Development", "Date Applied": "2026-06-19", "Status": "Rejected", "Source": "Lever", "Company Size (Employees)": "~3,500", "Sector": "Defense / Data Analytics", "Notes": "Rejected after resume review (received Jun 23)", "Next Steps": "N/A", "Last Updated": "2026-06-24"}, {"Company": "Twilio", "Role": "Software Engineer (L2) - Segment Team", "Date Applied": "2026-06-19", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~5,000", "Sector": "Communications / CPaaS", "Notes": "Applied via Twilio careers", "Next Steps": "Awaiting review", "Last Updated": "2026-06-19"}, {"Company": "Braze", "Role": "Senior Software Engineer I - Full-stack", "Date Applied": "2026-06-19", "Status": "Rejected", "Source": "Direct", "Company Size (Employees)": "~1,700", "Sector": "Marketing Tech / SaaS", "Notes": "Rejected after application review (notification 2026-06-26)", "Next Steps": null, "Last Updated": "2026-06-26"}, {"Company": "Okta", "Role": "Software Engineer (multiple roles - 3 applications)", "Date Applied": "2026-06-19", "Status": "Rejected", "Source": "Direct", "Company Size (Employees)": "~6,000", "Sector": "Identity / Security SaaS", "Notes": "Rejection received 2026-06-22 for Staff Software Engineer, AI Agentic Experience (Auth0)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Amazon", "Role": "Software Development Engineer II - AWS Data Processing and Analytics", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Amazon", "Role": "Software Engineer I - AI/ML, AWS Neuron Distributed Training", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Application confirmed via email (ID: 10438055)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "Amazon", "Role": "Software Engineer I, Creator Sponsorships", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Application confirmed via email (ID: 10426761)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "Amazon", "Role": "Software Development Engineer \u2013 Big Data, AWS EMR / EMR EKS", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Amazon", "Role": "Software Dev Engineer II, AWS Web Toolkit, Platform Experience", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "JPMorgan Chase", "Role": "Data Analytics Solutions Associate - Consumer & Community Banking", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~300,000", "Sector": "Finance / Banking", "Notes": "Application confirmed (Job Number: 210739349)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "JPMorgan Chase", "Role": "Transformation and Innovation Team - Data Domain Modeling Associate", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~300,000", "Sector": "Finance / Banking", "Notes": "Application confirmed (Job Number: 210742686)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "Visa", "Role": "Associate Systems Analyst - Entry Level", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "Workday", "Company Size (Employees)": "~26,500", "Sector": "Fintech / Payments", "Notes": "Application received confirmation", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "Visa", "Role": "Associate Application Analyst", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "Workday", "Company Size (Employees)": "~26,500", "Sector": "Fintech / Payments", "Notes": "Application received confirmation", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "Visa", "Role": "Data Scientist", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "Workday", "Company Size (Employees)": "~26,500", "Sector": "Fintech / Payments", "Notes": "Rejected after resume review (Workday notification 2026-06-26)", "Next Steps": null, "Last Updated": "2026-06-26"}, {"Company": "Oracle", "Role": "Software Developer (336114)", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~160,000", "Sector": "Enterprise Software / Cloud", "Notes": "Application confirmed via email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "Oracle", "Role": "Software Developer 2 (335816)", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "Direct", "Company Size (Employees)": "~160,000", "Sector": "Enterprise Software / Cloud", "Notes": "Rejected 2026-06-25 (hiring manager moved forward with another candidate)", "Next Steps": "N/A", "Last Updated": "2026-06-25"}, {"Company": "Oracle", "Role": "Software Developer (334471)", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "Direct", "Company Size (Employees)": "~160,000", "Sector": "Enterprise Software / Cloud", "Notes": "Rejected 2026-06-27 (hiring manager moved forward with another candidate)", "Next Steps": "N/A", "Last Updated": "2026-06-28"}, {"Company": "American Express", "Role": "Software Engineers (26009293)", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~70,000", "Sector": "Finance / Payments", "Notes": "Application received confirmation", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "American Express", "Role": "Software Engineers (26009304)", "Date Applied": "2026-06-21", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~70,000", "Sector": "Finance / Payments", "Notes": "Application received confirmation", "Next Steps": "Awaiting review", "Last Updated": "2026-06-22"}, {"Company": "Amazon", "Role": "Software Dev Engineer II, Amazon Redshift (ID: 10451650)", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": null, "Last Updated": "2026-06-23"}, {"Company": "Amazon", "Role": "Software Dev Engineer II, IDEAS (ID: 10450094)", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": null, "Last Updated": "2026-06-23"}, {"Company": "Amazon", "Role": "Software Engineer II (ID: 10448272)", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": null, "Last Updated": "2026-06-23"}, {"Company": "Amazon", "Role": "Software Development Engineer, Sponsored Products Off-Search Homepage Team (ID: 10452125)", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": null, "Last Updated": "2026-06-23"}, {"Company": "Amazon", "Role": "SDE, AWS OpenSearch Service (ID: 10451604)", "Date Applied": "2026-06-21", "Status": "Rejected", "Source": "amazon.jobs", "Company Size (Employees)": "~1,500,000", "Sector": "Cloud / E-Commerce", "Notes": "Rejected 2026-06-23 (decided to progress with other candidates)", "Next Steps": null, "Last Updated": "2026-06-23"}, {"Company": "Jerry.ai", "Role": "Associate Data Scientist", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": "~150", "Sector": "AI / InsurTech", "Notes": "Application confirmed via Ashby", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Plaid", "Role": "Software Engineer", "Date Applied": "2026-06-22", "Status": "Rejected", "Source": "Ashby", "Company Size (Employees)": "~900", "Sector": "Fintech / Data", "Notes": "Rejected 2026-06-25 (no strong match for current open roles; email for Staff SWE - AI Applications role)", "Next Steps": "N/A", "Last Updated": "2026-06-25"}, {"Company": "Linear", "Role": "Product Engineer", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": "~100", "Sector": "Productivity / Dev Tools", "Notes": "Application confirmed via Ashby", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Chime", "Role": "AI/ML Engineer", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~1,300", "Sector": "Fintech / Neobank", "Notes": "Application confirmed via email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Chime", "Role": "Software Engineer, Credit Risk Platform", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~1,300", "Sector": "Fintech / Neobank", "Notes": "Application confirmed via email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Chime", "Role": "Software Engineer, Deposits & Insights", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~1,300", "Sector": "Fintech / Neobank", "Notes": "Application confirmed via email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Chime", "Role": "Software Engineer, MyPay", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~1,300", "Sector": "Fintech / Neobank", "Notes": "Application confirmed via email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "CrowdStrike", "Role": "Engineer I - New Grad, Agentic AI (Hybrid)", "Date Applied": "2026-06-22", "Status": "Rejected", "Source": "Workday", "Company Size (Employees)": "~8,500", "Sector": "Cybersecurity", "Notes": "Rejected \u2013 R29022 Engineer I New Grad (notification 2026-06-26)", "Next Steps": null, "Last Updated": "2026-06-26"}, {"Company": "Brex", "Role": "Multiple roles (7 confirmation emails; specific roles unclear)", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Greenhouse", "Company Size (Employees)": "~1,200", "Sector": "Fintech / Corporate Cards", "Notes": "7 confirmation emails received 2026-06-22; roles not named in emails", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "Asana", "Role": "Unknown role", "Date Applied": "2026-06-22", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~1,800", "Sector": "Productivity / SaaS", "Notes": "Application confirmed via email; role not specified in confirmation", "Next Steps": "Awaiting review", "Last Updated": "2026-06-23"}, {"Company": "ZipRecruiter", "Role": "Software Engineer III", "Date Applied": "2026-06-25", "Status": "Applied", "Source": "ZipRecruiter", "Company Size (Employees)": "~2,600", "Sector": "Tech / HR", "Notes": "Application confirmed via ZipRecruiter email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-25"}, {"Company": "ZipRecruiter", "Role": "Decision Scientist II, Mobile", "Date Applied": "2026-06-25", "Status": "Applied", "Source": "ZipRecruiter", "Company Size (Employees)": "~2,600", "Sector": "Tech / HR", "Notes": "Application confirmed via ZipRecruiter email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-25"}, {"Company": "Figma", "Role": "Data Scientist, Finance", "Date Applied": "2026-06-25", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~1,000", "Sector": "Design / Tech", "Notes": "Application confirmed via Figma email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-25"}, {"Company": "Figma", "Role": "Data Scientist", "Date Applied": "2026-06-25", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~1,000", "Sector": "Design / Tech", "Notes": "Application confirmed via Figma email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-25"}, {"Company": "PrizePicks", "Role": "Data Engineer", "Date Applied": "2026-06-25", "Status": "Applied", "Source": "Indeed", "Company Size (Employees)": "~500", "Sector": "Gaming / DFS", "Notes": "Application confirmed via Indeed (Atlanta, GA)", "Next Steps": "Awaiting review", "Last Updated": "2026-06-25"}, {"Company": "Replit", "Role": "Software Engineer, Replit Cloud", "Date Applied": "2026-06-26", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": null, "Sector": null, "Notes": "Applied 2026-06-25; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-26"}, {"Company": "Replit", "Role": "Senior Product Engineer, Product Platform", "Date Applied": "2026-06-26", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": null, "Sector": null, "Notes": "Applied 2026-06-25; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-26"}, {"Company": "Replit", "Role": "Software Engineer, Enterprise", "Date Applied": "2026-06-26", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": null, "Sector": null, "Notes": "Applied 2026-06-25; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-26"}, {"Company": "Cloudflare", "Role": "Systems Engineer, MAPS", "Date Applied": "2026-06-26", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": null, "Sector": null, "Notes": "Applied 2026-06-25; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-26"}, {"Company": "Databricks", "Role": "Software Engineer - GenAI Inference", "Date Applied": "2026-06-26", "Status": "Applied", "Source": "Greenhouse", "Company Size (Employees)": null, "Sector": null, "Notes": "Applied 2026-06-25; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-26"}, {"Company": "Databricks", "Role": "Senior Data Scientist", "Date Applied": "2026-06-26", "Status": "Applied", "Source": "Greenhouse", "Company Size (Employees)": null, "Sector": null, "Notes": "Applied 2026-06-25; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-26"}, {"Company": "Databricks", "Role": "Senior Software Engineer - Money Team", "Date Applied": "2026-06-26", "Status": "Applied", "Source": "Greenhouse", "Company Size (Employees)": null, "Sector": null, "Notes": "Applied 2026-06-25; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-26"}, {"Company": "Ramp", "Role": "Software Engineer, Production Engineering", "Date Applied": "2026-06-28", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": "~2,000", "Sector": "Fintech / Expense Management", "Notes": "Applied 2026-06-28; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-29"}, {"Company": "Ramp", "Role": "Software Engineer, Credit", "Date Applied": "2026-06-28", "Status": "Applied", "Source": "Ashby", "Company Size (Employees)": "~2,000", "Sector": "Fintech / Expense Management", "Notes": "Applied 2026-06-28; confirmation received", "Next Steps": "Awaiting review", "Last Updated": "2026-06-29"}, {"Company": "Coinbase", "Role": "Software Engineer (Role 1 - unspecified in confirmation)", "Date Applied": "2026-06-28", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~4,700", "Sector": "Crypto / Fintech", "Notes": "Applied 2026-06-28; 2 confirmations received, role titles not in email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-29"}, {"Company": "Coinbase", "Role": "Software Engineer (Role 2 - unspecified in confirmation)", "Date Applied": "2026-06-28", "Status": "Applied", "Source": "Direct", "Company Size (Employees)": "~4,700", "Sector": "Crypto / Fintech", "Notes": "Applied 2026-06-28; 2 confirmations received, role titles not in email", "Next Steps": "Awaiting review", "Last Updated": "2026-06-29"}];
+const TARGETS = [{"#": 1, "Company": "Google", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 2, "Company": "Amazon", "Applied?": "Yes", "Sector": "Tech", "Size": "MNC"}, {"#": 3, "Company": "Meta", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 4, "Company": "Uber", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 5, "Company": "Nutanix", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 6, "Company": "Rubrik", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 7, "Company": "Microsoft", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 8, "Company": "Apple", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 9, "Company": "D.E. Shaw", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 10, "Company": "Citadel", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 11, "Company": "Wells Fargo", "Applied?": "No", "Sector": "Finance", "Size": "MNC"}, {"#": 12, "Company": "Stripe", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 13, "Company": "Confluent", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 14, "Company": "Cisco", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 15, "Company": "Palo Alto Networks", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 16, "Company": "Salesforce", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 17, "Company": "Amex", "Applied?": "Yes", "Sector": "Finance", "Size": "MNC"}, {"#": 18, "Company": "TRC", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 19, "Company": "Media.net", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 20, "Company": "Rippling", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 21, "Company": "IMC", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 22, "Company": "Nvidia", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 23, "Company": "Morgan Stanley", "Applied?": "No", "Sector": "Finance", "Size": "MNC"}, {"#": 24, "Company": "Visa", "Applied?": "Yes", "Sector": "Finance", "Size": "MNC"}, {"#": 25, "Company": "Atlassian", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 26, "Company": "Graviton", "Applied?": "No", "Sector": "AI", "Size": "Early Stage"}, {"#": 27, "Company": "Netflix", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 28, "Company": "LinkedIn", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 29, "Company": "Adobe", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 30, "Company": "Oracle", "Applied?": "Yes", "Sector": "Tech", "Size": "MNC"}, {"#": 31, "Company": "Qualcomm", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 32, "Company": "ServiceNow", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 33, "Company": "Workday", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 34, "Company": "Palantir", "Applied?": "Yes", "Sector": "Tech", "Size": "Big"}, {"#": 35, "Company": "Twilio", "Applied?": "Yes", "Sector": "Tech", "Size": "Medium"}, {"#": 36, "Company": "Okta", "Applied?": "Yes", "Sector": "Tech", "Size": "Medium"}, {"#": 37, "Company": "Datadog", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 38, "Company": "Cloudflare", "Applied?": "Yes", "Sector": "Tech", "Size": "Big"}, {"#": 39, "Company": "Elastic", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 40, "Company": "Splunk", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 41, "Company": "Jane Street", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 42, "Company": "Two Sigma", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 43, "Company": "Hudson River Trading", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 44, "Company": "Jump Trading", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 45, "Company": "Optiver", "Applied?": "No", "Sector": "Finance", "Size": "Big"}, {"#": 46, "Company": "Goldman Sachs", "Applied?": "No", "Sector": "Finance", "Size": "MNC"}, {"#": 47, "Company": "JP Morgan", "Applied?": "No", "Sector": "Finance", "Size": "MNC"}, {"#": 48, "Company": "BlackRock", "Applied?": "No", "Sector": "Finance", "Size": "MNC"}, {"#": 49, "Company": "Bloomberg", "Applied?": "No", "Sector": "Finance", "Size": "MNC"}, {"#": 50, "Company": "Robinhood", "Applied?": "Yes", "Sector": "Finance", "Size": "Medium"}, {"#": 51, "Company": "Plaid", "Applied?": "Yes", "Sector": "Finance", "Size": "Medium"}, {"#": 52, "Company": "Brex", "Applied?": "Yes", "Sector": "Finance", "Size": "Medium"}, {"#": 53, "Company": "Ramp", "Applied?": "Yes", "Sector": "Finance", "Size": "Medium"}, {"#": 54, "Company": "Coinbase", "Applied?": "Yes", "Sector": "Finance", "Size": "Big"}, {"#": 55, "Company": "Chime", "Applied?": "Yes", "Sector": "Finance", "Size": "Medium"}, {"#": 56, "Company": "Databricks", "Applied?": "Yes", "Sector": "Tech", "Size": "Big"}, {"#": 57, "Company": "Snowflake", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 58, "Company": "MongoDB", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 59, "Company": "dbt Labs", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 60, "Company": "Grafana Labs", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 61, "Company": "Supabase", "Applied?": "No", "Sector": "Tech", "Size": "Early Stage"}, {"#": 62, "Company": "Neon", "Applied?": "No", "Sector": "Tech", "Size": "Early Stage"}, {"#": 63, "Company": "HashiCorp", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 64, "Company": "CockroachDB", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 65, "Company": "PlanetScale", "Applied?": "No", "Sector": "Tech", "Size": "Early Stage"}, {"#": 66, "Company": "OpenAI", "Applied?": "No", "Sector": "AI", "Size": "Big"}, {"#": 67, "Company": "Anthropic", "Applied?": "No", "Sector": "AI", "Size": "Big"}, {"#": 68, "Company": "Cohere", "Applied?": "No", "Sector": "AI", "Size": "Medium"}, {"#": 69, "Company": "Scale AI", "Applied?": "No", "Sector": "AI", "Size": "Big"}, {"#": 70, "Company": "Hugging Face", "Applied?": "No", "Sector": "AI", "Size": "Medium"}, {"#": 71, "Company": "Perplexity", "Applied?": "No", "Sector": "AI", "Size": "Medium"}, {"#": 72, "Company": "Mistral", "Applied?": "No", "Sector": "AI", "Size": "Medium"}, {"#": 73, "Company": "Groq", "Applied?": "No", "Sector": "AI", "Size": "Medium"}, {"#": 74, "Company": "Modal", "Applied?": "No", "Sector": "AI", "Size": "Early Stage"}, {"#": 75, "Company": "Anyscale", "Applied?": "No", "Sector": "AI", "Size": "Medium"}, {"#": 76, "Company": "Together AI", "Applied?": "No", "Sector": "AI", "Size": "Early Stage"}, {"#": 77, "Company": "Weights & Biases", "Applied?": "No", "Sector": "AI", "Size": "Medium"}, {"#": 78, "Company": "GitHub", "Applied?": "No", "Sector": "Tech", "Size": "MNC"}, {"#": 79, "Company": "GitLab", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 80, "Company": "Vercel", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 81, "Company": "Replit", "Applied?": "Yes", "Sector": "Tech", "Size": "Medium"}, {"#": 82, "Company": "Cursor", "Applied?": "No", "Sector": "Tech", "Size": "Early Stage"}, {"#": 83, "Company": "Codeium", "Applied?": "No", "Sector": "Tech", "Size": "Early Stage"}, {"#": 84, "Company": "Sentry", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 85, "Company": "Temporal", "Applied?": "No", "Sector": "Tech", "Size": "Early Stage"}, {"#": 86, "Company": "Retool", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 87, "Company": "Linear", "Applied?": "Yes", "Sector": "Tech", "Size": "Early Stage"}, {"#": 88, "Company": "Notion", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 89, "Company": "Figma", "Applied?": "Yes", "Sector": "Tech", "Size": "Big"}, {"#": 90, "Company": "HubSpot", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 91, "Company": "Zendesk", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 92, "Company": "Asana", "Applied?": "Yes", "Sector": "Tech", "Size": "Medium"}, {"#": 93, "Company": "Airtable", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 94, "Company": "Amplitude", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 95, "Company": "Braze", "Applied?": "Yes", "Sector": "Tech", "Size": "Medium"}, {"#": 96, "Company": "ClickUp", "Applied?": "No", "Sector": "Tech", "Size": "Medium"}, {"#": 97, "Company": "CrowdStrike", "Applied?": "Yes", "Sector": "Tech", "Size": "Big"}, {"#": 98, "Company": "Wiz", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 99, "Company": "SentinelOne", "Applied?": "No", "Sector": "Tech", "Size": "Big"}, {"#": 100, "Company": "Zscaler", "Applied?": "No", "Sector": "Tech", "Size": "Big"}];
+
+// Stats
+function renderStats() {
+  const total = APPS.length;
+  const applied = APPS.filter(a => a.Status === 'Applied').length;
+  const rejected = APPS.filter(a => a.Status === 'Rejected').length;
+  const rRate = total > 0 ? Math.round(rejected / total * 100) : 0;
+  const targLeft = TARGETS.filter(t => t['Applied?'] !== 'Yes').length;
+  [
+    ['Total Applications', total, 'across all roles', '#0969da'],
+    ['Active', applied, 'awaiting response', '#9a6700'],
+    ['Rejected', rejected, 'declined after review', '#cf222e'],
+    ['Rejection Rate', rRate + '%', 'of total applications', '#d1242f'],
+    ['Targets Remaining', targLeft, 'companies to apply to', '#1a7f37'],
+  ].forEach(([lbl,val,sub,color]) => {
+    const el = document.createElement('div');
+    el.className = 'stat';
+    el.innerHTML = `<div class="lbl">${lbl}</div><div class="val" style="color:${color}">${val}</div><div class="sub">${sub}</div>`;
+    document.getElementById('stats').appendChild(el);
+  });
+}
+
+// Charts
+Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, sans-serif';
+function renderCharts() {
+  const byDate = {};
+  APPS.forEach(a => { const d = a['Date Applied'] || '?'; byDate[d] = (byDate[d]||0)+1; });
+  const dates = Object.keys(byDate).sort();
+  new Chart(document.getElementById('ct'), {
+    type: 'bar',
+    data: { labels: dates, datasets: [{ data: dates.map(d => byDate[d]), backgroundColor: 'rgba(9,105,218,0.25)', borderColor: '#0969da', borderWidth: 1.5, borderRadius: 4 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { font: { size: 10 }, maxRotation: 40 }, grid: { color: '#f0f0f0' } },
+        y: { ticks: { stepSize: 1 }, grid: { color: '#f0f0f0' }, beginAtZero: true }
+      }
+    }
+  });
+
+  const bySector = {};
+  APPS.forEach(a => { const s = ((a.Sector || 'Other').split('/')[0]).trim(); bySector[s] = (bySector[s]||0)+1; });
+  const entries = Object.entries(bySector).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  const PAL = ['#0969da','#1a7f37','#9a6700','#cf222e','#8250df','#0550ae','#bf3989','#1b7c83'];
+  new Chart(document.getElementById('cs'), {
+    type: 'doughnut',
+    data: { labels: entries.map(e=>e[0]), datasets: [{ data: entries.map(e=>e[1]), backgroundColor: PAL, borderWidth: 2, borderColor: '#fff', hoverOffset: 8 }] },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'right', labels: { font: { size: 11 }, boxWidth: 10, padding: 8 } } }
+    }
+  });
+}
+
+// Targets
+function renderTargetsTbl(data) {
+  document.getElementById('tgt-count').textContent = data.length + ' companies';
+  document.getElementById('tbl-tgt').innerHTML = `
+    <table class="tbl">
+      <thead><tr><th>Company</th><th>Sector</th><th>Size</th><th>Status</th></tr></thead>
+      <tbody>${data.map(t => `
+        <tr>
+          <td style="font-weight:500">${t.Company}</td>
+          <td style="color:#656d76">${t.Sector||'—'}</td>
+          <td style="color:#656d76">${t.Size||'—'}</td>
+          <td>${t['Applied?']==='Yes' ? '<span class="badge b-yes">✓ Applied</span>' : '<span style="color:#8c959f">—</span>'}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+function filterTargets(q) {
+  const ql = q.toLowerCase();
+  renderTargetsTbl(ql ? TARGETS.filter(t => t.Company.toLowerCase().includes(ql) || (t.Sector||'').toLowerCase().includes(ql) || (t.Size||'').toLowerCase().includes(ql)) : TARGETS);
+}
+
+// Emails
+let allEmails = [], activeFilter = 'All';
+function classify(subject, snippet) {
+  const sl=(subject||'').toLowerCase(), sn=(snippet||'').toLowerCase();
+  if (sn.includes('regret')||sn.includes('unfortunately')||sn.includes('other candidates')||sn.includes('not moving forward')||sn.includes('have decided not')||sl.includes('rejection')) return ['rejected','❌ Rejected'];
+  if (sl.includes('interview')||sn.includes('interview')||sn.includes('phone screen')||sn.includes('next step')||sn.includes('schedule a call')) return ['interview','📞 Interview'];
+  if (sl.includes('offer')||sn.includes('happy to offer')||sn.includes('pleased to offer')) return ['offer','🎉 Offer'];
+  if (sn.includes('received your application')||sn.includes('thank you for applying')||sn.includes('application has been received')||sn.includes('application is officially')) return ['applied','✅ Applied'];
+  return ['new','📬 Update'];
+}
+function renderEmailList() {
+  const fil = activeFilter==='All' ? allEmails : allEmails.filter(e=>e.cls===activeFilter);
+  if (!fil.length) { document.getElementById('emails').innerHTML='<div class="loading">No emails for this filter</div>'; return; }
+  document.getElementById('emails').innerHTML = '<div class="email-list">'+fil.map(e=>`
+    <div class="email-item">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+        <div style="flex:1;min-width:0">
+          <div class="email-subj">${e.subject}</div>
+          <div class="email-snip">${e.snip}</div>
+          <div class="email-meta">${e.date} · ${e.from}</div>
+        </div>
+        <span class="badge b-${e.cls}">${e.lbl}</span>
+      </div>
+    </div>`).join('')+'</div>';
+}
+function setFilter(f) {
+  activeFilter = f;
+  document.querySelectorAll('.ftab').forEach(t => t.classList.toggle('active', t.dataset.f===f));
+  renderEmailList();
+}
+async function loadEmails() {
+  document.getElementById('emails').innerHTML='<div class="loading"><span class="spin"></span>Loading emails...</div>';
+  try {
+    const r = await window.cowork.callMcpTool('mcp__d95b592f-88ef-4cfb-ba63-2eff72710b5e__search_threads',
+      { query: 'subject:(application OR interview OR "thank you for applying" OR offer OR rejection OR "next steps" OR "phone screen" OR "moving forward" OR unfortunately) newer_than:7d', pageSize: 25 });
+    const data = r.structuredContent ?? JSON.parse(r.content[0].text);
+    const threads = data.threads || [];
+    allEmails = threads.map(t => {
+      const msg = t.messages[t.messages.length-1];
+      const [cls,lbl] = classify(msg.subject, msg.snippet);
+      return {
+        subject: msg.subject||'(no subject)',
+        snip: (msg.snippet||'').substring(0,90),
+        date: new Date(msg.date).toLocaleDateString('en-US',{month:'short',day:'numeric'}),
+        from: (msg.sender||'').split('@')[0].replace(/^no-?reply$/i,'') || msg.sender,
+        cls, lbl
+      };
+    });
+    const counts = {All: allEmails.length};
+    allEmails.forEach(e => { counts[e.cls] = (counts[e.cls]||0)+1; });
+    const TABS = [['All','All'],['applied','✅ Applied'],['interview','📞 Interview'],['rejected','❌ Rejected'],['offer','🎉 Offer']];
+    document.getElementById('ftabs').innerHTML = TABS.filter(([k])=>k==='All'||counts[k]>0).map(([k,l])=>`
+      <span class="ftab ${activeFilter===k?'active':''}" data-f="${k}" onclick="setFilter('${k}')">${l} ${counts[k]||''}</span>`).join('');
+    if (!allEmails.length) { document.getElementById('emails').innerHTML='<div class="loading">No job emails in the last 7 days 🎉</div>'; return; }
+    renderEmailList();
+  } catch(e) {
+    document.getElementById('emails').innerHTML=`<div style="color:#cf222e;padding:16px;font-size:13px">⚠️ ${e.message}</div>`;
+  }
+}
+async function fullRefresh() {
+  document.getElementById('ts').textContent = new Date().toLocaleTimeString();
+  await loadEmails();
+}
+
+// Init
+document.getElementById('ts').textContent = new Date().toLocaleTimeString();
+renderStats();
+renderCharts();
+renderTargetsTbl(TARGETS);
+loadEmails();
+</script>
+</body>
+</html>
