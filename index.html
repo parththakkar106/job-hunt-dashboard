@@ -38,8 +38,16 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 @keyframes spin { to { transform: rotate(360deg); } }
 ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-thumb { background: #d0d7de; border-radius: 2px; }
 @media (max-width: 768px) {
+  body { padding: 12px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat .val { font-size: 22px; }
   .grid-2, .grid-3-2 { grid-template-columns: 1fr; }
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+@media (max-width: 480px) {
+  .card { padding: 12px; }
+  .header h1 { font-size: 17px; }
+  .hide-xs { display: none; }
 }
 </style>
 </head>
@@ -111,10 +119,11 @@ async function init() {
   });
   const entries = Object.entries(d.bySector).sort((a,b)=>b[1]-a[1]).slice(0,8);
   const PAL = ['#0969da','#1a7f37','#9a6700','#cf222e','#8250df','#0550ae','#bf3989','#1b7c83'];
+  const isMobile = window.innerWidth <= 768;
   new Chart(document.getElementById('cs'), {
     type: 'doughnut',
     data: { labels: entries.map(e=>e[0]), datasets: [{ data: entries.map(e=>e[1]), backgroundColor: PAL, borderWidth:2, borderColor:'#fff', hoverOffset:8 }] },
-    options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'right',labels:{font:{size:11},boxWidth:10,padding:8}}} }
+    options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:isMobile?'bottom':'right',labels:{font:{size:11},boxWidth:10,padding:8}}} }
   });
 
   renderApps(d.apps);
@@ -133,11 +142,11 @@ function statusBadge(s) {
 
 function renderApps(apps) {
   document.getElementById('apps-tbl').innerHTML = `<table class="tbl">
-    <thead><tr><th>Company</th><th>Role</th><th>Date</th><th>Status</th></tr></thead>
+    <thead><tr><th>Company</th><th>Role</th><th class="hide-xs">Date</th><th>Status</th></tr></thead>
     <tbody>${apps.map(a=>`<tr>
       <td style="font-weight:500">${a.Company}</td>
       <td style="color:#656d76;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${a.Role||'—'}</td>
-      <td style="color:#656d76;white-space:nowrap">${a['Date Applied']||'—'}</td>
+      <td class="hide-xs" style="color:#656d76;white-space:nowrap">${a['Date Applied']||'—'}</td>
       <td>${statusBadge(a.Status)}</td>
     </tr>`).join('')}</tbody></table>`;
 }
@@ -150,11 +159,11 @@ function filterApps(q) {
 function renderTargets(targets) {
   document.getElementById('tgt-ct').textContent = targets.length + ' companies';
   document.getElementById('tgt-tbl').innerHTML = `<table class="tbl">
-    <thead><tr><th>Company</th><th>Sector</th><th>Size</th><th>Status</th></tr></thead>
+    <thead><tr><th>Company</th><th>Sector</th><th class="hide-xs">Size</th><th>Status</th></tr></thead>
     <tbody>${targets.map(t=>`<tr>
       <td style="font-weight:500">${t.Company}</td>
       <td style="color:#656d76">${t.Sector||'—'}</td>
-      <td style="color:#656d76">${t.Size||'—'}</td>
+      <td class="hide-xs" style="color:#656d76">${t.Size||'—'}</td>
       <td>${t['Applied?']==='Yes'?'<span class="badge b-yes">✓ Applied</span>':'<span style="color:#8c959f">—</span>'}</td>
     </tr>`).join('')}</tbody></table>`;
 }
