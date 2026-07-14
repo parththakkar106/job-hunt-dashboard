@@ -363,7 +363,7 @@
     },
     "Merge": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -395,7 +395,7 @@
     },
     "Braze": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -403,7 +403,7 @@
     },
     "Okta": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -411,7 +411,7 @@
     },
     "Palantir": {
       "total": 3,
-      "applied": 2,
+      "applied": 3,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -427,7 +427,7 @@
     },
     "Amazon": {
       "total": 10,
-      "applied": 2,
+      "applied": 10,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 8,
@@ -451,7 +451,7 @@
     },
     "Oracle": {
       "total": 3,
-      "applied": 0,
+      "applied": 3,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 3,
@@ -459,7 +459,7 @@
     },
     "Visa": {
       "total": 3,
-      "applied": 2,
+      "applied": 3,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -491,7 +491,7 @@
     },
     "CrowdStrike": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -507,7 +507,7 @@
     },
     "Linear": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -515,7 +515,7 @@
     },
     "Plaid": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -539,7 +539,7 @@
     },
     "SentiLink": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -587,7 +587,7 @@
     },
     "Ramp": {
       "total": 2,
-      "applied": 1,
+      "applied": 2,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -611,7 +611,7 @@
     },
     "Sierra": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -619,7 +619,7 @@
     },
     "Snap": {
       "total": 2,
-      "applied": 0,
+      "applied": 2,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 2,
@@ -675,7 +675,7 @@
     },
     "Luma": {
       "total": 1,
-      "applied": 0,
+      "applied": 1,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 1,
@@ -683,7 +683,7 @@
     },
     "Shopify": {
       "total": 2,
-      "applied": 0,
+      "applied": 2,
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 2,
