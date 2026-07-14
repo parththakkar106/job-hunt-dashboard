@@ -14,13 +14,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .header .sub { font-size: 13px; color: #656d76; margin-top: 3px; }
 .btn { background: #f6f8fa; border: 1px solid #d0d7de; color: #24292f; padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; }
 .btn:hover { background: #eaeef2; }
-.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 20px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
 .stat { background: #fff; border: 1px solid #d0d7de; border-radius: 10px; padding: 16px; }
 .stat .lbl { font-size: 11px; color: #656d76; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
 .stat .val { font-size: 28px; font-weight: 700; margin: 6px 0 2px; }
 .stat .sub { font-size: 11px; color: #8c959f; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.grid-3-2 { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; margin-top: 12px; }
 .card { background: #fff; border: 1px solid #d0d7de; border-radius: 10px; padding: 16px; }
 .card-hd { font-size: 14px; font-weight: 600; color: #1f2328; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
 .chart-wrap { position: relative; height: 200px; }
@@ -47,7 +46,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
   body { padding: 12px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stat .val { font-size: 22px; }
-  .grid-2, .grid-3-2 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
   .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 @media (max-width: 480px) {
@@ -71,8 +70,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
 <script>
-let ALL_TARGETS = [];
-
 async function init() {
   const r = await fetch('./data.json?t=' + Date.now());
   if (!r.ok) { document.getElementById('root').innerHTML = '<div class="loading">⚠️ data.json not found — run update_dashboard.py first</div>'; return; }
@@ -87,13 +84,10 @@ async function init() {
     ['Active', s.applied, 'awaiting response', '#9a6700'],
     ['Rejected', s.rejected, 'declined after review', '#cf222e'],
     ['Rejection Rate', s.rejectionRate + '%', 'of total applications', '#d1242f'],
-    ['Targets Remaining', s.targetsRemaining, 'companies to apply to', '#1a7f37'],
   ];
   const statsHtml = CARDS.map(([lbl,val,sub,color]) =>
     `<div class="stat"><div class="lbl">${lbl}</div><div class="val" style="color:${color}">${val}</div><div class="sub">${sub}</div></div>`
   ).join('');
-
-  ALL_TARGETS = d.targets || [];
 
   document.getElementById('root').innerHTML = `
     ${buildDigest(d.digest)}
@@ -102,17 +96,10 @@ async function init() {
       <div class="card"><div class="card-hd">Applications Over Time</div><div class="chart-wrap"><canvas id="ct"></canvas></div></div>
       <div class="card"><div class="card-hd">By Sector</div><div class="chart-wrap"><canvas id="cs"></canvas></div></div>
     </div>
-    <div class="grid-3-2">
-      <div class="card">
-        <div class="card-hd">All Applications</div>
-        <input class="search" id="app-q" placeholder="Search company or role..." oninput="filterApps(this.value,d.apps)">
-        <div class="tbl-wrap" id="apps-tbl"></div>
-      </div>
-      <div class="card">
-        <div class="card-hd">Target Companies <span style="font-size:12px;color:#8c959f;font-weight:400" id="tgt-ct"></span></div>
-        <input class="search" id="tgt-q" placeholder="Search companies..." oninput="filterTargets(this.value)">
-        <div class="tbl-wrap" id="tgt-tbl"></div>
-      </div>
+    <div class="card" style="margin-top:12px">
+      <div class="card-hd">All Applications</div>
+      <input class="search" id="app-q" placeholder="Search company or role..." oninput="filterApps(this.value,d.apps)">
+      <div class="tbl-wrap" id="apps-tbl"></div>
     </div>
     <div class="card" style="margin-top:12px">
       <div class="card-hd">By Company <span style="font-size:12px;color:#8c959f;font-weight:400" id="co-ct"></span></div>
@@ -139,7 +126,6 @@ async function init() {
   });
 
   renderApps(d.apps);
-  renderTargets(ALL_TARGETS);
   renderCompanies(d.byCompany || {});
 
   // store apps on window for filter
@@ -219,23 +205,6 @@ function renderApps(apps) {
 function filterApps(q) {
   const ql = q.toLowerCase();
   renderApps(ql ? window._apps.filter(a => a.Company.toLowerCase().includes(ql) || (a.Role||'').toLowerCase().includes(ql)) : window._apps);
-}
-
-function renderTargets(targets) {
-  document.getElementById('tgt-ct').textContent = targets.length + ' companies';
-  document.getElementById('tgt-tbl').innerHTML = `<table class="tbl">
-    <thead><tr><th>Company</th><th>Sector</th><th class="hide-xs">Size</th><th>Status</th></tr></thead>
-    <tbody>${targets.map(t=>`<tr>
-      <td style="font-weight:500">${t.Company}</td>
-      <td style="color:#656d76">${t.Sector||'—'}</td>
-      <td class="hide-xs" style="color:#656d76">${t.Size||'—'}</td>
-      <td>${t['Applied?']==='Yes'?'<span class="badge b-yes">✓ Applied</span>':'<span style="color:#8c959f">—</span>'}</td>
-    </tr>`).join('')}</tbody></table>`;
-}
-
-function filterTargets(q) {
-  const ql = q.toLowerCase();
-  renderTargets(ql ? ALL_TARGETS.filter(t => t.Company.toLowerCase().includes(ql)||(t.Sector||'').toLowerCase().includes(ql)) : ALL_TARGETS);
 }
 
 function renderCompanies(byCompany) {

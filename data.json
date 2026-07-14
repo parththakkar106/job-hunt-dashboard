@@ -5,8 +5,7 @@
     "total": 75,
     "applied": 48,
     "rejected": 27,
-    "rejectionRate": 36,
-    "targetsRemaining": 79
+    "rejectionRate": 36
   },
   "digest": {
     "date": "2026-07-14",
@@ -341,7 +340,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -349,7 +348,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -357,7 +356,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -373,7 +372,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -381,7 +380,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -389,7 +388,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -413,7 +412,7 @@
       "total": 3,
       "applied": 3,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 1,
       "other": 0
     },
@@ -421,7 +420,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -429,7 +428,7 @@
       "total": 10,
       "applied": 10,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 8,
       "other": 0
     },
@@ -437,7 +436,7 @@
       "total": 2,
       "applied": 2,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 0,
       "other": 0
     },
@@ -445,7 +444,7 @@
       "total": 2,
       "applied": 2,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 0,
       "other": 0
     },
@@ -461,7 +460,7 @@
       "total": 3,
       "applied": 3,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 1,
       "other": 0
     },
@@ -469,7 +468,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -477,7 +476,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -485,7 +484,7 @@
       "total": 5,
       "applied": 5,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 5,
       "rejected": 0,
       "other": 0
     },
@@ -501,7 +500,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -525,7 +524,7 @@
       "total": 2,
       "applied": 2,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 0,
       "other": 0
     },
@@ -533,7 +532,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -549,7 +548,7 @@
       "total": 2,
       "applied": 2,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 0,
       "other": 0
     },
@@ -557,7 +556,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -565,7 +564,7 @@
       "total": 3,
       "applied": 3,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 3,
       "rejected": 0,
       "other": 0
     },
@@ -573,7 +572,7 @@
       "total": 3,
       "applied": 3,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 3,
       "rejected": 0,
       "other": 0
     },
@@ -581,7 +580,7 @@
       "total": 2,
       "applied": 2,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 2,
       "rejected": 0,
       "other": 0
     },
@@ -589,7 +588,7 @@
       "total": 2,
       "applied": 2,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 1,
       "other": 0
     },
@@ -597,7 +596,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -605,7 +604,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -629,7 +628,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -637,7 +636,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -645,7 +644,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -653,7 +652,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -661,7 +660,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -669,7 +668,7 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 0,
       "other": 0
     },
@@ -1590,708 +1589,6 @@
       "Notes": "Rejection received 2026-07-09 via Ashby; application date unknown (no prior confirmation on record). Possibly a separate application from the 2026-07-13 Shopify rejection (different sender/ATS, identical canned text) -- kept as a separate row per fail-safe rule since it cannot be confidently matched to the existing Shopify row.",
       "Next Steps": null,
       "Last Updated": "2026-07-09"
-    }
-  ],
-  "targets": [
-    {
-      "#": 1,
-      "Company": "Google",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 2,
-      "Company": "Amazon",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 3,
-      "Company": "Meta",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 4,
-      "Company": "Uber",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 5,
-      "Company": "Nutanix",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 6,
-      "Company": "Rubrik",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 7,
-      "Company": "Microsoft",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 8,
-      "Company": "Apple",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 9,
-      "Company": "D.E. Shaw",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 10,
-      "Company": "Citadel",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 11,
-      "Company": "Wells Fargo",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 12,
-      "Company": "Stripe",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 13,
-      "Company": "Confluent",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 14,
-      "Company": "Cisco",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 15,
-      "Company": "Palo Alto Networks",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 16,
-      "Company": "Salesforce",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 17,
-      "Company": "Amex",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 18,
-      "Company": "TRC",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 19,
-      "Company": "Media.net",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 20,
-      "Company": "Rippling",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 21,
-      "Company": "IMC",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 22,
-      "Company": "Nvidia",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 23,
-      "Company": "Morgan Stanley",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 24,
-      "Company": "Visa",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 25,
-      "Company": "Atlassian",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 26,
-      "Company": "Graviton",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 27,
-      "Company": "Netflix",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 28,
-      "Company": "LinkedIn",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 29,
-      "Company": "Adobe",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 30,
-      "Company": "Oracle",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 31,
-      "Company": "Qualcomm",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 32,
-      "Company": "ServiceNow",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 33,
-      "Company": "Workday",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 34,
-      "Company": "Palantir",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 35,
-      "Company": "Twilio",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 36,
-      "Company": "Okta",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 37,
-      "Company": "Datadog",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 38,
-      "Company": "Cloudflare",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 39,
-      "Company": "Elastic",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 40,
-      "Company": "Splunk",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 41,
-      "Company": "Jane Street",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 42,
-      "Company": "Two Sigma",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 43,
-      "Company": "Hudson River Trading",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 44,
-      "Company": "Jump Trading",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 45,
-      "Company": "Optiver",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 46,
-      "Company": "Goldman Sachs",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 47,
-      "Company": "JP Morgan",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 48,
-      "Company": "BlackRock",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 49,
-      "Company": "Bloomberg",
-      "Applied?": "No",
-      "Sector": "Finance",
-      "Size": "MNC"
-    },
-    {
-      "#": 50,
-      "Company": "Robinhood",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "Medium"
-    },
-    {
-      "#": 51,
-      "Company": "Plaid",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "Medium"
-    },
-    {
-      "#": 52,
-      "Company": "Brex",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "Medium"
-    },
-    {
-      "#": 53,
-      "Company": "Ramp",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "Medium"
-    },
-    {
-      "#": 54,
-      "Company": "Coinbase",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "Big"
-    },
-    {
-      "#": 55,
-      "Company": "Chime",
-      "Applied?": "Yes",
-      "Sector": "Finance",
-      "Size": "Medium"
-    },
-    {
-      "#": 56,
-      "Company": "Databricks",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 57,
-      "Company": "Snowflake",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 58,
-      "Company": "MongoDB",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 59,
-      "Company": "dbt Labs",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 60,
-      "Company": "Grafana Labs",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 61,
-      "Company": "Supabase",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 62,
-      "Company": "Neon",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 63,
-      "Company": "HashiCorp",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 64,
-      "Company": "CockroachDB",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 65,
-      "Company": "PlanetScale",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 66,
-      "Company": "OpenAI",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Big"
-    },
-    {
-      "#": 67,
-      "Company": "Anthropic",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Big"
-    },
-    {
-      "#": 68,
-      "Company": "Cohere",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Medium"
-    },
-    {
-      "#": 69,
-      "Company": "Scale AI",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Big"
-    },
-    {
-      "#": 70,
-      "Company": "Hugging Face",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Medium"
-    },
-    {
-      "#": 71,
-      "Company": "Perplexity",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Medium"
-    },
-    {
-      "#": 72,
-      "Company": "Mistral",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Medium"
-    },
-    {
-      "#": 73,
-      "Company": "Groq",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Medium"
-    },
-    {
-      "#": 74,
-      "Company": "Modal",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 75,
-      "Company": "Anyscale",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Medium"
-    },
-    {
-      "#": 76,
-      "Company": "Together AI",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 77,
-      "Company": "Weights & Biases",
-      "Applied?": "No",
-      "Sector": "AI",
-      "Size": "Medium"
-    },
-    {
-      "#": 78,
-      "Company": "GitHub",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "MNC"
-    },
-    {
-      "#": 79,
-      "Company": "GitLab",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 80,
-      "Company": "Vercel",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 81,
-      "Company": "Replit",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 82,
-      "Company": "Cursor",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 83,
-      "Company": "Codeium",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 84,
-      "Company": "Sentry",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 85,
-      "Company": "Temporal",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 86,
-      "Company": "Retool",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 87,
-      "Company": "Linear",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Early Stage"
-    },
-    {
-      "#": 88,
-      "Company": "Notion",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 89,
-      "Company": "Figma",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 90,
-      "Company": "HubSpot",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 91,
-      "Company": "Zendesk",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 92,
-      "Company": "Asana",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 93,
-      "Company": "Airtable",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 94,
-      "Company": "Amplitude",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 95,
-      "Company": "Braze",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 96,
-      "Company": "ClickUp",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Medium"
-    },
-    {
-      "#": 97,
-      "Company": "CrowdStrike",
-      "Applied?": "Yes",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 98,
-      "Company": "Wiz",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 99,
-      "Company": "SentinelOne",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
-    },
-    {
-      "#": 100,
-      "Company": "Zscaler",
-      "Applied?": "No",
-      "Sector": "Tech",
-      "Size": "Big"
     }
   ]
 }
