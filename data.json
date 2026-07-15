@@ -1,299 +1,178 @@
 {
-  "generated": "2026-07-14T00:00:00Z",
-  "lastRun": "2026-07-14T00:00:00Z",
+  "generated": "2026-07-15T00:00:00Z",
+  "lastRun": "2026-07-15T00:00:00Z",
   "stats": {
-    "total": 75,
-    "applied": 48,
-    "rejected": 27,
-    "rejectionRate": 36
+    "total": 83,
+    "applied": 54,
+    "rejected": 29,
+    "rejectionRate": 35
   },
   "digest": {
-    "date": "2026-07-14",
+    "date": "2026-07-15",
     "actionRequired": [],
     "todayAdded": [
       {
-        "Company": "SentiLink",
-        "Role": "Data Scientist, New Grad",
-        "Date Applied": "2026-06-25",
-        "Status": "Rejected",
-        "Source": "Ashby",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Ashby 2026-06-25; Rejected 2026-06-29 (decided not to move forward)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-06-29"
-      },
-      {
-        "Company": "Snyk",
-        "Role": "Software Engineer",
-        "Date Applied": "2026-07-02",
+        "Company": "Affirm",
+        "Role": "Software Engineer II, Back-end (Card Mgmt & Transaction Processing)",
+        "Date Applied": "2026-07-14",
         "Status": "Applied",
-        "Source": "Workday",
+        "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Application confirmed via Workday",
+        "Notes": "Application confirmed via Greenhouse",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-02"
+        "Last Updated": "2026-07-14"
       },
       {
-        "Company": "Harvey",
-        "Role": "Software Engineer, Agents",
-        "Date Applied": "2026-07-02",
+        "Company": "Affirm",
+        "Role": "Software Engineer II, Backend (Capital Orchestration)",
+        "Date Applied": "2026-07-14",
         "Status": "Applied",
-        "Source": "Ashby",
+        "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Application confirmed via Ashby (2 confirmation emails received)",
+        "Notes": "Application confirmed via Greenhouse",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-02"
+        "Last Updated": "2026-07-14"
       },
       {
-        "Company": "Sierra",
-        "Role": "Software Engineer, Agent - Financial Services",
-        "Date Applied": "2026-07-04",
-        "Status": "Rejected",
-        "Source": "Ashby",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Ashby 2026-07-04 (4 confirmation emails); Rejected 2026-07-07",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-07"
-      },
-      {
-        "Company": "Snap",
-        "Role": "Software Engineer, Backend, Level 4",
-        "Date Applied": "2026-07-04",
-        "Status": "Rejected",
-        "Source": "Workday",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Workday 2026-07-04; Rejected 2026-07-08 (position filled)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-08"
-      },
-      {
-        "Company": "Snap",
-        "Role": "Software Engineer, Full Stack, Level 4",
-        "Date Applied": "2026-07-04",
-        "Status": "Rejected",
-        "Source": "Workday",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Workday 2026-07-04; Rejected 2026-07-08 (pursuing other candidates)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-08"
-      },
-      {
-        "Company": "WHOOP",
-        "Role": "Software Engineer I (Backend)",
-        "Date Applied": "2026-07-08",
+        "Company": "Affirm",
+        "Role": "Software Engineer II, Backend (Test Infra)",
+        "Date Applied": "2026-07-14",
         "Status": "Applied",
-        "Source": "Lever",
+        "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Application confirmed via Lever",
+        "Notes": "Application confirmed via Greenhouse",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-08"
+        "Last Updated": "2026-07-14"
       },
       {
-        "Company": "Column",
-        "Role": "Unknown role",
-        "Date Applied": "2026-07-09",
+        "Company": "Affirm",
+        "Role": "Analyst II, Full Stack (Fraud Analytics)",
+        "Date Applied": "2026-07-14",
         "Status": "Applied",
-        "Source": "Ashby",
+        "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Application confirmed via Ashby; role not specified in confirmation",
+        "Notes": "Application confirmed via Greenhouse",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-09"
+        "Last Updated": "2026-07-14"
       },
       {
-        "Company": "Valon",
-        "Role": "Unknown role",
-        "Date Applied": "2026-07-09",
+        "Company": "Affirm",
+        "Role": "Analyst II, Full Stack (Credit Analytics)",
+        "Date Applied": "2026-07-14",
         "Status": "Applied",
-        "Source": "Ashby",
+        "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Application confirmed via Ashby (2 confirmation emails); role not specified in confirmation",
+        "Notes": "Application confirmed via Greenhouse",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-09"
+        "Last Updated": "2026-07-14"
       },
       {
-        "Company": "Coupa",
-        "Role": "Director, Network Reliability Engineering",
-        "Date Applied": "2026-07-10",
+        "Company": "Chime",
+        "Role": "Software Engineer, Support Foundations",
+        "Date Applied": "2026-07-14",
         "Status": "Applied",
-        "Source": "Lever",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Lever",
+        "Source": "Direct",
+        "Company Size (Employees)": "~1,300",
+        "Sector": "Fintech / Neobank",
+        "Notes": "Application confirmed via email",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-10"
+        "Last Updated": "2026-07-14"
       },
       {
-        "Company": "Shopify",
-        "Role": "Unknown role",
+        "Company": "AQR",
+        "Role": "Global Stock Selection Research - Analyst/Associate",
         "Date Applied": null,
         "Status": "Rejected",
-        "Source": "Ashby",
+        "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Rejection received 2026-07-09 via Ashby; application date unknown (no prior confirmation on record). Possibly a separate application from the 2026-07-13 Shopify rejection (different sender/ATS, identical canned text) -- kept as a separate row per fail-safe rule since it cannot be confidently matched to the existing Shopify row.",
+        "Notes": "Rejection received 2026-07-14 via Greenhouse; application date unknown (no prior confirmation on record)",
         "Next Steps": null,
-        "Last Updated": "2026-07-09"
+        "Last Updated": "2026-07-14"
+      },
+      {
+        "Company": "Nasdaq",
+        "Role": "Index Portfolio Management Analyst",
+        "Date Applied": null,
+        "Status": "Rejected",
+        "Source": "Workday",
+        "Company Size (Employees)": null,
+        "Sector": null,
+        "Notes": "Rejection received 2026-07-14 via Workday; application date unknown (no prior confirmation on record)",
+        "Next Steps": null,
+        "Last Updated": "2026-07-14"
       }
     ],
     "todayRejected": [
       {
-        "Company": "Ramp",
-        "Role": "Software Engineer, Production Engineering",
-        "Date Applied": "2026-06-28",
-        "Status": "Rejected",
-        "Source": "Ashby",
-        "Company Size (Employees)": "~2,000",
-        "Sector": "Fintech / Expense Management",
-        "Notes": "Applied 2026-06-28; confirmation received; Rejected 2026-07-02 (many qualified applicants for the role)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-02"
-      },
-      {
-        "Company": "Linear",
-        "Role": "Product Engineer",
-        "Date Applied": "2026-06-22",
-        "Status": "Rejected",
-        "Source": "Ashby",
-        "Company Size (Employees)": "~100",
-        "Sector": "Productivity / Dev Tools",
-        "Notes": "Application confirmed via Ashby; Rejected 2026-07-09 (decided not to move forward)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-09"
-      },
-      {
-        "Company": "SentiLink",
-        "Role": "Data Scientist, New Grad",
-        "Date Applied": "2026-06-25",
-        "Status": "Rejected",
-        "Source": "Ashby",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Ashby 2026-06-25; Rejected 2026-06-29 (decided not to move forward)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-06-29"
-      },
-      {
-        "Company": "Sierra",
-        "Role": "Software Engineer, Agent - Financial Services",
-        "Date Applied": "2026-07-04",
-        "Status": "Rejected",
-        "Source": "Ashby",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Ashby 2026-07-04 (4 confirmation emails); Rejected 2026-07-07",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-07"
-      },
-      {
-        "Company": "Snap",
-        "Role": "Software Engineer, Backend, Level 4",
-        "Date Applied": "2026-07-04",
-        "Status": "Rejected",
-        "Source": "Workday",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Workday 2026-07-04; Rejected 2026-07-08 (position filled)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-08"
-      },
-      {
-        "Company": "Snap",
-        "Role": "Software Engineer, Full Stack, Level 4",
-        "Date Applied": "2026-07-04",
-        "Status": "Rejected",
-        "Source": "Workday",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Workday 2026-07-04; Rejected 2026-07-08 (pursuing other candidates)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-08"
-      },
-      {
-        "Company": "Shopify",
-        "Role": "Unknown role",
+        "Company": "AQR",
+        "Role": "Global Stock Selection Research - Analyst/Associate",
         "Date Applied": null,
         "Status": "Rejected",
-        "Source": "Ashby",
+        "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Rejection received 2026-07-09 via Ashby; application date unknown (no prior confirmation on record). Possibly a separate application from the 2026-07-13 Shopify rejection (different sender/ATS, identical canned text) -- kept as a separate row per fail-safe rule since it cannot be confidently matched to the existing Shopify row.",
+        "Notes": "Rejection received 2026-07-14 via Greenhouse; application date unknown (no prior confirmation on record)",
         "Next Steps": null,
-        "Last Updated": "2026-07-09"
+        "Last Updated": "2026-07-14"
+      },
+      {
+        "Company": "Nasdaq",
+        "Role": "Index Portfolio Management Analyst",
+        "Date Applied": null,
+        "Status": "Rejected",
+        "Source": "Workday",
+        "Company Size (Employees)": null,
+        "Sector": null,
+        "Notes": "Rejection received 2026-07-14 via Workday; application date unknown (no prior confirmation on record)",
+        "Next Steps": null,
+        "Last Updated": "2026-07-14"
       }
     ],
     "todayChanged": [
       {
-        "Company": "Ramp",
-        "Role": "Software Engineer, Production Engineering",
-        "Status": "Rejected"
-      },
-      {
-        "Company": "Linear",
-        "Role": "Product Engineer",
-        "Status": "Rejected"
-      },
-      {
-        "Company": "SentiLink",
-        "Role": "Data Scientist, New Grad",
-        "Status": "Rejected"
-      },
-      {
-        "Company": "Snyk",
-        "Role": "Software Engineer",
+        "Company": "Affirm",
+        "Role": "Software Engineer II, Back-end (Card Mgmt & Transaction Processing)",
         "Status": "Applied"
       },
       {
-        "Company": "Harvey",
-        "Role": "Software Engineer, Agents",
+        "Company": "Affirm",
+        "Role": "Software Engineer II, Backend (Capital Orchestration)",
         "Status": "Applied"
       },
       {
-        "Company": "Sierra",
-        "Role": "Software Engineer, Agent - Financial Services",
+        "Company": "Affirm",
+        "Role": "Software Engineer II, Backend (Test Infra)",
+        "Status": "Applied"
+      },
+      {
+        "Company": "Affirm",
+        "Role": "Analyst II, Full Stack (Fraud Analytics)",
+        "Status": "Applied"
+      },
+      {
+        "Company": "Affirm",
+        "Role": "Analyst II, Full Stack (Credit Analytics)",
+        "Status": "Applied"
+      },
+      {
+        "Company": "Chime",
+        "Role": "Software Engineer, Support Foundations",
+        "Status": "Applied"
+      },
+      {
+        "Company": "AQR",
+        "Role": "Global Stock Selection Research - Analyst/Associate",
         "Status": "Rejected"
       },
       {
-        "Company": "Snap",
-        "Role": "Software Engineer, Backend, Level 4",
-        "Status": "Rejected"
-      },
-      {
-        "Company": "Snap",
-        "Role": "Software Engineer, Full Stack, Level 4",
-        "Status": "Rejected"
-      },
-      {
-        "Company": "WHOOP",
-        "Role": "Software Engineer I (Backend)",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Column",
-        "Role": "Unknown role",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Valon",
-        "Role": "Unknown role",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Coupa",
-        "Role": "Director, Network Reliability Engineering",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Shopify",
-        "Role": "Unknown role",
+        "Company": "Nasdaq",
+        "Role": "Index Portfolio Management Analyst",
         "Status": "Rejected"
       }
     ]
@@ -312,28 +191,38 @@
     "2026-07-08": 1,
     "2026-07-09": 2,
     "2026-07-10": 1,
-    "2026-07-12": 3
+    "2026-07-12": 3,
+    "2026-07-14": 6
   },
   "bySector": {
-    "AI": 4,
-    "HealthTech": 1,
-    "AdTech": 1,
-    "B2B SaaS": 1,
-    "Fintech": 13,
-    "Marketing Tech": 1,
-    "Identity": 1,
-    "Defense": 3,
-    "Communications": 1,
-    "Cloud": 10,
-    "Finance": 4,
-    "Enterprise Software": 3,
-    "Productivity": 2,
+    "AI / Enterprise Software": 1,
+    "HealthTech / Mental Health": 1,
+    "AdTech / Data Analytics": 1,
+    "B2B SaaS / API": 1,
+    "Fintech": 1,
+    "AI / Video": 1,
+    "AI / Sales Tech": 1,
+    "Marketing Tech / SaaS": 1,
+    "Identity / Security SaaS": 1,
+    "Defense / Data Analytics": 3,
+    "Communications / CPaaS": 1,
+    "Cloud / E-Commerce": 10,
+    "Finance / Payments": 2,
+    "Finance / Banking": 2,
+    "Enterprise Software / Cloud": 3,
+    "Fintech / Payments": 3,
+    "Productivity / SaaS": 1,
+    "Fintech / Corporate Cards": 1,
+    "Fintech / Neobank": 6,
     "Cybersecurity": 1,
-    "Design": 2,
-    "Gaming": 1,
-    "Other": 22,
-    "Tech": 2,
-    "Crypto": 2
+    "AI / InsurTech": 1,
+    "Productivity / Dev Tools": 1,
+    "Fintech / Data": 1,
+    "Design / Tech": 2,
+    "Gaming / DFS": 1,
+    "Tech / HR": 2,
+    "Crypto / Fintech": 2,
+    "Fintech / Expense Management": 2
   },
   "byCompany": {
     "Auctor": {
@@ -481,10 +370,10 @@
       "other": 0
     },
     "Chime": {
-      "total": 5,
-      "applied": 5,
+      "total": 6,
+      "applied": 6,
       "actionRequired": 0,
-      "inProgress": 5,
+      "inProgress": 6,
       "rejected": 0,
       "other": 0
     },
@@ -672,7 +561,31 @@
       "rejected": 0,
       "other": 0
     },
+    "Affirm": {
+      "total": 5,
+      "applied": 5,
+      "actionRequired": 0,
+      "inProgress": 5,
+      "rejected": 0,
+      "other": 0
+    },
+    "AQR": {
+      "total": 1,
+      "applied": 1,
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
+    },
     "Luma": {
+      "total": 1,
+      "applied": 1,
+      "actionRequired": 0,
+      "inProgress": 0,
+      "rejected": 1,
+      "other": 0
+    },
+    "Nasdaq": {
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
@@ -1526,9 +1439,9 @@
       "Source": "Ashby",
       "Company Size (Employees)": null,
       "Sector": null,
-      "Notes": "Application confirmed via Ashby; role not specified in confirmation",
+      "Notes": "Application confirmed via Ashby (2 confirmation emails received 2026-07-12 and 2026-07-14); role not specified in confirmation",
       "Next Steps": "Awaiting review",
-      "Last Updated": "2026-07-12"
+      "Last Updated": "2026-07-14"
     },
     {
       "Company": "Chime",
@@ -1555,6 +1468,90 @@
       "Last Updated": "2026-07-12"
     },
     {
+      "Company": "Affirm",
+      "Role": "Software Engineer II, Back-end (Card Mgmt & Transaction Processing)",
+      "Date Applied": "2026-07-14",
+      "Status": "Applied",
+      "Source": "Greenhouse",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Greenhouse",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-14"
+    },
+    {
+      "Company": "Affirm",
+      "Role": "Software Engineer II, Backend (Capital Orchestration)",
+      "Date Applied": "2026-07-14",
+      "Status": "Applied",
+      "Source": "Greenhouse",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Greenhouse",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-14"
+    },
+    {
+      "Company": "Affirm",
+      "Role": "Software Engineer II, Backend (Test Infra)",
+      "Date Applied": "2026-07-14",
+      "Status": "Applied",
+      "Source": "Greenhouse",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Greenhouse",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-14"
+    },
+    {
+      "Company": "Affirm",
+      "Role": "Analyst II, Full Stack (Fraud Analytics)",
+      "Date Applied": "2026-07-14",
+      "Status": "Applied",
+      "Source": "Greenhouse",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Greenhouse",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-14"
+    },
+    {
+      "Company": "Affirm",
+      "Role": "Analyst II, Full Stack (Credit Analytics)",
+      "Date Applied": "2026-07-14",
+      "Status": "Applied",
+      "Source": "Greenhouse",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Greenhouse",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-14"
+    },
+    {
+      "Company": "Chime",
+      "Role": "Software Engineer, Support Foundations",
+      "Date Applied": "2026-07-14",
+      "Status": "Applied",
+      "Source": "Direct",
+      "Company Size (Employees)": "~1,300",
+      "Sector": "Fintech / Neobank",
+      "Notes": "Application confirmed via email",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-14"
+    },
+    {
+      "Company": "AQR",
+      "Role": "Global Stock Selection Research - Analyst/Associate",
+      "Date Applied": null,
+      "Status": "Rejected",
+      "Source": "Greenhouse",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Rejection received 2026-07-14 via Greenhouse; application date unknown (no prior confirmation on record)",
+      "Next Steps": null,
+      "Last Updated": "2026-07-14"
+    },
+    {
       "Company": "Luma",
       "Role": "Research Scientist / Engineer - Controllability, Personalization & Productization",
       "Date Applied": null,
@@ -1565,6 +1562,18 @@
       "Notes": "Rejection received 2026-07-12; application date unknown (no prior confirmation on record)",
       "Next Steps": null,
       "Last Updated": "2026-07-12"
+    },
+    {
+      "Company": "Nasdaq",
+      "Role": "Index Portfolio Management Analyst",
+      "Date Applied": null,
+      "Status": "Rejected",
+      "Source": "Workday",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Rejection received 2026-07-14 via Workday; application date unknown (no prior confirmation on record)",
+      "Next Steps": null,
+      "Last Updated": "2026-07-14"
     },
     {
       "Company": "Shopify",
