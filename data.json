@@ -1,178 +1,64 @@
 {
-  "generated": "2026-07-15T00:00:00Z",
-  "lastRun": "2026-07-15T00:00:00Z",
+  "generated": "2026-07-16T00:00:00Z",
+  "lastRun": "2026-07-16T00:00:00Z",
   "stats": {
-    "total": 83,
-    "applied": 54,
-    "rejected": 29,
+    "total": 85,
+    "applied": 55,
+    "rejected": 30,
     "rejectionRate": 35
   },
   "digest": {
-    "date": "2026-07-15",
+    "date": "2026-07-16",
     "actionRequired": [],
     "todayAdded": [
       {
         "Company": "Affirm",
-        "Role": "Software Engineer II, Back-end (Card Mgmt & Transaction Processing)",
-        "Date Applied": "2026-07-14",
+        "Role": "Software Engineer II, Backend (ML Training & Serving)",
+        "Date Applied": "2026-07-15",
         "Status": "Applied",
         "Source": "Greenhouse",
         "Company Size (Employees)": null,
         "Sector": null,
         "Notes": "Application confirmed via Greenhouse",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-14"
+        "Last Updated": "2026-07-15"
       },
       {
-        "Company": "Affirm",
-        "Role": "Software Engineer II, Backend (Capital Orchestration)",
-        "Date Applied": "2026-07-14",
-        "Status": "Applied",
-        "Source": "Greenhouse",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Greenhouse",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-14"
-      },
-      {
-        "Company": "Affirm",
-        "Role": "Software Engineer II, Backend (Test Infra)",
-        "Date Applied": "2026-07-14",
-        "Status": "Applied",
-        "Source": "Greenhouse",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Greenhouse",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-14"
-      },
-      {
-        "Company": "Affirm",
-        "Role": "Analyst II, Full Stack (Fraud Analytics)",
-        "Date Applied": "2026-07-14",
-        "Status": "Applied",
-        "Source": "Greenhouse",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Greenhouse",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-14"
-      },
-      {
-        "Company": "Affirm",
-        "Role": "Analyst II, Full Stack (Credit Analytics)",
-        "Date Applied": "2026-07-14",
-        "Status": "Applied",
-        "Source": "Greenhouse",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Greenhouse",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-14"
-      },
-      {
-        "Company": "Chime",
-        "Role": "Software Engineer, Support Foundations",
-        "Date Applied": "2026-07-14",
-        "Status": "Applied",
-        "Source": "Direct",
-        "Company Size (Employees)": "~1,300",
-        "Sector": "Fintech / Neobank",
-        "Notes": "Application confirmed via email",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-14"
-      },
-      {
-        "Company": "AQR",
-        "Role": "Global Stock Selection Research - Analyst/Associate",
+        "Company": "Luma",
+        "Role": "Software Engineer - Product",
         "Date Applied": null,
         "Status": "Rejected",
-        "Source": "Greenhouse",
+        "Source": "Gem",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Rejection received 2026-07-14 via Greenhouse; application date unknown (no prior confirmation on record)",
+        "Notes": "Rejection received 2026-07-15 via Gem; application date unknown (no prior confirmation on record); distinct role from the existing Luma rejection (Research Scientist / Engineer)",
         "Next Steps": null,
-        "Last Updated": "2026-07-14"
-      },
-      {
-        "Company": "Nasdaq",
-        "Role": "Index Portfolio Management Analyst",
-        "Date Applied": null,
-        "Status": "Rejected",
-        "Source": "Workday",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Rejection received 2026-07-14 via Workday; application date unknown (no prior confirmation on record)",
-        "Next Steps": null,
-        "Last Updated": "2026-07-14"
+        "Last Updated": "2026-07-15"
       }
     ],
     "todayRejected": [
       {
-        "Company": "AQR",
-        "Role": "Global Stock Selection Research - Analyst/Associate",
+        "Company": "Luma",
+        "Role": "Software Engineer - Product",
         "Date Applied": null,
         "Status": "Rejected",
-        "Source": "Greenhouse",
+        "Source": "Gem",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Rejection received 2026-07-14 via Greenhouse; application date unknown (no prior confirmation on record)",
+        "Notes": "Rejection received 2026-07-15 via Gem; application date unknown (no prior confirmation on record); distinct role from the existing Luma rejection (Research Scientist / Engineer)",
         "Next Steps": null,
-        "Last Updated": "2026-07-14"
-      },
-      {
-        "Company": "Nasdaq",
-        "Role": "Index Portfolio Management Analyst",
-        "Date Applied": null,
-        "Status": "Rejected",
-        "Source": "Workday",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Rejection received 2026-07-14 via Workday; application date unknown (no prior confirmation on record)",
-        "Next Steps": null,
-        "Last Updated": "2026-07-14"
+        "Last Updated": "2026-07-15"
       }
     ],
     "todayChanged": [
       {
         "Company": "Affirm",
-        "Role": "Software Engineer II, Back-end (Card Mgmt & Transaction Processing)",
+        "Role": "Software Engineer II, Backend (ML Training & Serving)",
         "Status": "Applied"
       },
       {
-        "Company": "Affirm",
-        "Role": "Software Engineer II, Backend (Capital Orchestration)",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Affirm",
-        "Role": "Software Engineer II, Backend (Test Infra)",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Affirm",
-        "Role": "Analyst II, Full Stack (Fraud Analytics)",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Affirm",
-        "Role": "Analyst II, Full Stack (Credit Analytics)",
-        "Status": "Applied"
-      },
-      {
-        "Company": "Chime",
-        "Role": "Software Engineer, Support Foundations",
-        "Status": "Applied"
-      },
-      {
-        "Company": "AQR",
-        "Role": "Global Stock Selection Research - Analyst/Associate",
-        "Status": "Rejected"
-      },
-      {
-        "Company": "Nasdaq",
-        "Role": "Index Portfolio Management Analyst",
+        "Company": "Luma",
+        "Role": "Software Engineer - Product",
         "Status": "Rejected"
       }
     ]
@@ -192,7 +78,8 @@
     "2026-07-09": 2,
     "2026-07-10": 1,
     "2026-07-12": 3,
-    "2026-07-14": 6
+    "2026-07-14": 6,
+    "2026-07-15": 1
   },
   "bySector": {
     "AI / Enterprise Software": 1,
@@ -562,10 +449,10 @@
       "other": 0
     },
     "Affirm": {
-      "total": 5,
-      "applied": 5,
+      "total": 6,
+      "applied": 6,
       "actionRequired": 0,
-      "inProgress": 5,
+      "inProgress": 6,
       "rejected": 0,
       "other": 0
     },
@@ -578,11 +465,11 @@
       "other": 0
     },
     "Luma": {
-      "total": 1,
-      "applied": 1,
+      "total": 2,
+      "applied": 2,
       "actionRequired": 0,
       "inProgress": 0,
-      "rejected": 1,
+      "rejected": 2,
       "other": 0
     },
     "Nasdaq": {
@@ -1540,6 +1427,18 @@
       "Last Updated": "2026-07-14"
     },
     {
+      "Company": "Affirm",
+      "Role": "Software Engineer II, Backend (ML Training & Serving)",
+      "Date Applied": "2026-07-15",
+      "Status": "Applied",
+      "Source": "Greenhouse",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Greenhouse",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-15"
+    },
+    {
       "Company": "AQR",
       "Role": "Global Stock Selection Research - Analyst/Associate",
       "Date Applied": null,
@@ -1562,6 +1461,18 @@
       "Notes": "Rejection received 2026-07-12; application date unknown (no prior confirmation on record)",
       "Next Steps": null,
       "Last Updated": "2026-07-12"
+    },
+    {
+      "Company": "Luma",
+      "Role": "Software Engineer - Product",
+      "Date Applied": null,
+      "Status": "Rejected",
+      "Source": "Gem",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Rejection received 2026-07-15 via Gem; application date unknown (no prior confirmation on record); distinct role from the existing Luma rejection (Research Scientist / Engineer)",
+      "Next Steps": null,
+      "Last Updated": "2026-07-15"
     },
     {
       "Company": "Nasdaq",
