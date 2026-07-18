@@ -1,64 +1,52 @@
 {
-  "generated": "2026-07-16T00:00:00Z",
-  "lastRun": "2026-07-16T00:00:00Z",
+  "generated": "2026-07-18T00:00:00Z",
+  "lastRun": "2026-07-18T00:00:00Z",
   "stats": {
-    "total": 85,
+    "total": 86,
     "applied": 55,
-    "rejected": 30,
-    "rejectionRate": 35
+    "rejected": 31,
+    "rejectionRate": 36
   },
   "digest": {
-    "date": "2026-07-16",
+    "date": "2026-07-18",
     "actionRequired": [],
     "todayAdded": [
       {
-        "Company": "Affirm",
-        "Role": "Software Engineer II, Backend (ML Training & Serving)",
-        "Date Applied": "2026-07-15",
-        "Status": "Applied",
-        "Source": "Greenhouse",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via Greenhouse",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-15"
-      },
-      {
-        "Company": "Luma",
-        "Role": "Software Engineer - Product",
+        "Company": "Nasdaq",
+        "Role": "Analyst - Software Developer",
         "Date Applied": null,
-        "Status": "Rejected",
-        "Source": "Gem",
+        "Status": "Applied",
+        "Source": "Workday",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Rejection received 2026-07-15 via Gem; application date unknown (no prior confirmation on record); distinct role from the existing Luma rejection (Research Scientist / Engineer)",
-        "Next Steps": null,
-        "Last Updated": "2026-07-15"
+        "Notes": "Phone screen requested 2026-07-17 via Workday (recruiter Kate Summers); application date unknown (no prior confirmation on record); distinct role from the existing Nasdaq rejection (Index Portfolio Management Analyst)",
+        "Next Steps": "Schedule phone screen",
+        "Last Updated": "2026-07-17"
       }
     ],
     "todayRejected": [
       {
-        "Company": "Luma",
-        "Role": "Software Engineer - Product",
-        "Date Applied": null,
+        "Company": "Harvey",
+        "Role": "Software Engineer, Agents",
+        "Date Applied": "2026-07-02",
         "Status": "Rejected",
-        "Source": "Gem",
+        "Source": "Ashby",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Rejection received 2026-07-15 via Gem; application date unknown (no prior confirmation on record); distinct role from the existing Luma rejection (Research Scientist / Engineer)",
-        "Next Steps": null,
+        "Notes": "Application confirmed via Ashby (2 confirmation emails received); Rejected 2026-07-15 (decided not to move forward)",
+        "Next Steps": "N/A",
         "Last Updated": "2026-07-15"
       }
     ],
     "todayChanged": [
       {
-        "Company": "Affirm",
-        "Role": "Software Engineer II, Backend (ML Training & Serving)",
+        "Company": "Nasdaq",
+        "Role": "Analyst - Software Developer",
         "Status": "Applied"
       },
       {
-        "Company": "Luma",
-        "Role": "Software Engineer - Product",
+        "Company": "Harvey",
+        "Role": "Software Engineer, Agents",
         "Status": "Rejected"
       }
     ]
@@ -372,8 +360,8 @@
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
-      "inProgress": 1,
-      "rejected": 0,
+      "inProgress": 0,
+      "rejected": 1,
       "other": 0
     },
     "Snyk": {
@@ -473,10 +461,10 @@
       "other": 0
     },
     "Nasdaq": {
-      "total": 1,
-      "applied": 1,
+      "total": 2,
+      "applied": 2,
       "actionRequired": 0,
-      "inProgress": 0,
+      "inProgress": 1,
       "rejected": 1,
       "other": 0
     },
@@ -1214,13 +1202,13 @@
       "Company": "Harvey",
       "Role": "Software Engineer, Agents",
       "Date Applied": "2026-07-02",
-      "Status": "Applied",
+      "Status": "Rejected",
       "Source": "Ashby",
       "Company Size (Employees)": null,
       "Sector": null,
-      "Notes": "Application confirmed via Ashby (2 confirmation emails received)",
-      "Next Steps": "Awaiting review",
-      "Last Updated": "2026-07-02"
+      "Notes": "Application confirmed via Ashby (2 confirmation emails received); Rejected 2026-07-15 (decided not to move forward)",
+      "Next Steps": "N/A",
+      "Last Updated": "2026-07-15"
     },
     {
       "Company": "Snyk",
@@ -1485,6 +1473,18 @@
       "Notes": "Rejection received 2026-07-14 via Workday; application date unknown (no prior confirmation on record)",
       "Next Steps": null,
       "Last Updated": "2026-07-14"
+    },
+    {
+      "Company": "Nasdaq",
+      "Role": "Analyst - Software Developer",
+      "Date Applied": null,
+      "Status": "Applied",
+      "Source": "Workday",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Phone screen requested 2026-07-17 via Workday (recruiter Kate Summers); application date unknown (no prior confirmation on record); distinct role from the existing Nasdaq rejection (Index Portfolio Management Analyst)",
+      "Next Steps": "Schedule phone screen",
+      "Last Updated": "2026-07-17"
     },
     {
       "Company": "Shopify",
