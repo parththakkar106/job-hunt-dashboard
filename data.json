@@ -1,55 +1,43 @@
 {
-  "generated": "2026-07-18T00:00:00Z",
-  "lastRun": "2026-07-18T00:00:00Z",
+  "generated": "2026-07-20T00:00:00Z",
+  "lastRun": "2026-07-20T00:00:00Z",
   "stats": {
-    "total": 86,
-    "applied": 55,
+    "total": 88,
+    "applied": 57,
     "rejected": 31,
-    "rejectionRate": 36
+    "rejectionRate": 35
   },
   "digest": {
-    "date": "2026-07-18",
+    "date": "2026-07-20",
     "actionRequired": [],
     "todayAdded": [
       {
-        "Company": "Nasdaq",
-        "Role": "Analyst - Software Developer",
-        "Date Applied": null,
+        "Company": "Abridge",
+        "Role": "Software Engineer - Early Career",
+        "Date Applied": "2026-07-19",
         "Status": "Applied",
-        "Source": "Workday",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Phone screen requested 2026-07-17 via Workday (recruiter Kate Summers); application date unknown (no prior confirmation on record); distinct role from the existing Nasdaq rejection (Index Portfolio Management Analyst)",
-        "Next Steps": "Schedule phone screen",
-        "Last Updated": "2026-07-17"
-      }
-    ],
-    "todayRejected": [
-      {
-        "Company": "Harvey",
-        "Role": "Software Engineer, Agents",
-        "Date Applied": "2026-07-02",
-        "Status": "Rejected",
         "Source": "Ashby",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Application confirmed via Ashby (2 confirmation emails received); Rejected 2026-07-15 (decided not to move forward)",
-        "Next Steps": "N/A",
-        "Last Updated": "2026-07-15"
-      }
-    ],
-    "todayChanged": [
-      {
-        "Company": "Nasdaq",
-        "Role": "Analyst - Software Developer",
-        "Status": "Applied"
+        "Notes": "Application confirmed via Ashby",
+        "Next Steps": "Awaiting review",
+        "Last Updated": "2026-07-19"
       },
       {
-        "Company": "Harvey",
-        "Role": "Software Engineer, Agents",
-        "Status": "Rejected"
+        "Company": "Notion",
+        "Role": "Software Engineer, AI Platform",
+        "Date Applied": "2026-07-19",
+        "Status": "Applied",
+        "Source": "Direct",
+        "Company Size (Employees)": null,
+        "Sector": null,
+        "Notes": "Application confirmed via email",
+        "Next Steps": "Awaiting review",
+        "Last Updated": "2026-07-19"
       }
-    ]
+    ],
+    "todayRejected": [],
+    "todayChanged": []
   },
   "byDate": {
     "2026-06-17": 6,
@@ -67,7 +55,8 @@
     "2026-07-10": 1,
     "2026-07-12": 3,
     "2026-07-14": 6,
-    "2026-07-15": 1
+    "2026-07-15": 1,
+    "2026-07-19": 2
   },
   "bySector": {
     "AI / Enterprise Software": 1,
@@ -474,6 +463,22 @@
       "actionRequired": 0,
       "inProgress": 0,
       "rejected": 2,
+      "other": 0
+    },
+    "Abridge": {
+      "total": 1,
+      "applied": 1,
+      "actionRequired": 0,
+      "inProgress": 1,
+      "rejected": 0,
+      "other": 0
+    },
+    "Notion": {
+      "total": 1,
+      "applied": 1,
+      "actionRequired": 0,
+      "inProgress": 1,
+      "rejected": 0,
       "other": 0
     }
   },
@@ -1314,9 +1319,9 @@
       "Source": "Ashby",
       "Company Size (Employees)": null,
       "Sector": null,
-      "Notes": "Application confirmed via Ashby (2 confirmation emails received 2026-07-12 and 2026-07-14); role not specified in confirmation",
+      "Notes": "Application confirmed via Ashby (3 confirmation emails received 2026-07-12, 2026-07-14, and 2026-07-18); role not specified in confirmation",
       "Next Steps": "Awaiting review",
-      "Last Updated": "2026-07-14"
+      "Last Updated": "2026-07-18"
     },
     {
       "Company": "Chime",
@@ -1425,6 +1430,30 @@
       "Notes": "Application confirmed via Greenhouse",
       "Next Steps": "Awaiting review",
       "Last Updated": "2026-07-15"
+    },
+    {
+      "Company": "Abridge",
+      "Role": "Software Engineer - Early Career",
+      "Date Applied": "2026-07-19",
+      "Status": "Applied",
+      "Source": "Ashby",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Ashby",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-19"
+    },
+    {
+      "Company": "Notion",
+      "Role": "Software Engineer, AI Platform",
+      "Date Applied": "2026-07-19",
+      "Status": "Applied",
+      "Source": "Direct",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via email",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-19"
     },
     {
       "Company": "AQR",
