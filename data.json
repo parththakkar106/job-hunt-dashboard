@@ -1,39 +1,27 @@
 {
-  "generated": "2026-07-20T00:00:00Z",
-  "lastRun": "2026-07-20T00:00:00Z",
+  "generated": "2026-07-23T00:00:00Z",
+  "lastRun": "2026-07-23T00:00:00Z",
   "stats": {
-    "total": 88,
-    "applied": 57,
+    "total": 89,
+    "applied": 58,
     "rejected": 31,
     "rejectionRate": 35
   },
   "digest": {
-    "date": "2026-07-20",
+    "date": "2026-07-23",
     "actionRequired": [],
     "todayAdded": [
       {
-        "Company": "Abridge",
-        "Role": "Software Engineer - Early Career",
-        "Date Applied": "2026-07-19",
+        "Company": "Revel",
+        "Role": "Software Engineer - Test (Entry-Junior)",
+        "Date Applied": "2026-07-22",
         "Status": "Applied",
         "Source": "Ashby",
         "Company Size (Employees)": null,
         "Sector": null,
         "Notes": "Application confirmed via Ashby",
         "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-19"
-      },
-      {
-        "Company": "Notion",
-        "Role": "Software Engineer, AI Platform",
-        "Date Applied": "2026-07-19",
-        "Status": "Applied",
-        "Source": "Direct",
-        "Company Size (Employees)": null,
-        "Sector": null,
-        "Notes": "Application confirmed via email",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-19"
+        "Last Updated": "2026-07-22"
       }
     ],
     "todayRejected": [],
@@ -56,7 +44,8 @@
     "2026-07-12": 3,
     "2026-07-14": 6,
     "2026-07-15": 1,
-    "2026-07-19": 2
+    "2026-07-19": 2,
+    "2026-07-22": 1
   },
   "bySector": {
     "AI / Enterprise Software": 1,
@@ -474,6 +463,14 @@
       "other": 0
     },
     "Notion": {
+      "total": 1,
+      "applied": 1,
+      "actionRequired": 0,
+      "inProgress": 1,
+      "rejected": 0,
+      "other": 0
+    },
+    "Revel": {
       "total": 1,
       "applied": 1,
       "actionRequired": 0,
@@ -1454,6 +1451,18 @@
       "Notes": "Application confirmed via email",
       "Next Steps": "Awaiting review",
       "Last Updated": "2026-07-19"
+    },
+    {
+      "Company": "Revel",
+      "Role": "Software Engineer - Test (Entry-Junior)",
+      "Date Applied": "2026-07-22",
+      "Status": "Applied",
+      "Source": "Ashby",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Application confirmed via Ashby",
+      "Next Steps": "Awaiting review",
+      "Last Updated": "2026-07-22"
     },
     {
       "Company": "AQR",
