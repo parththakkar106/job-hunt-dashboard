@@ -1,31 +1,50 @@
 {
-  "generated": "2026-07-23T00:00:00Z",
-  "lastRun": "2026-07-23T00:00:00Z",
+  "generated": "2026-07-24T00:00:00Z",
+  "lastRun": "2026-07-24T00:00:00Z",
   "stats": {
-    "total": 89,
+    "total": 90,
     "applied": 58,
-    "rejected": 31,
-    "rejectionRate": 35
+    "rejected": 32,
+    "rejectionRate": 36
   },
   "digest": {
-    "date": "2026-07-23",
+    "date": "2026-07-24",
     "actionRequired": [],
     "todayAdded": [
       {
-        "Company": "Revel",
-        "Role": "Software Engineer - Test (Entry-Junior)",
-        "Date Applied": "2026-07-22",
-        "Status": "Applied",
-        "Source": "Ashby",
+        "Company": "Luma",
+        "Role": "Forward Deployed Engineer",
+        "Date Applied": null,
+        "Status": "Rejected",
+        "Source": "Gem",
         "Company Size (Employees)": null,
         "Sector": null,
-        "Notes": "Application confirmed via Ashby",
-        "Next Steps": "Awaiting review",
-        "Last Updated": "2026-07-22"
+        "Notes": "Rejection received 2026-07-23 via Gem; application date unknown (no prior confirmation on record); distinct role from existing Luma rejections (Research Scientist / Engineer and Software Engineer - Product)",
+        "Next Steps": null,
+        "Last Updated": "2026-07-23"
       }
     ],
-    "todayRejected": [],
-    "todayChanged": []
+    "todayRejected": [
+      {
+        "Company": "Luma",
+        "Role": "Forward Deployed Engineer",
+        "Date Applied": null,
+        "Status": "Rejected",
+        "Source": "Gem",
+        "Company Size (Employees)": null,
+        "Sector": null,
+        "Notes": "Rejection received 2026-07-23 via Gem; application date unknown (no prior confirmation on record); distinct role from existing Luma rejections (Research Scientist / Engineer and Software Engineer - Product)",
+        "Next Steps": null,
+        "Last Updated": "2026-07-23"
+      }
+    ],
+    "todayChanged": [
+      {
+        "Company": "Luma",
+        "Role": "Forward Deployed Engineer",
+        "Status": "Rejected"
+      }
+    ]
   },
   "byDate": {
     "2026-06-17": 6,
@@ -431,11 +450,11 @@
       "other": 0
     },
     "Luma": {
-      "total": 2,
-      "applied": 2,
+      "total": 3,
+      "applied": 3,
       "actionRequired": 0,
       "inProgress": 0,
-      "rejected": 2,
+      "rejected": 3,
       "other": 0
     },
     "Nasdaq": {
@@ -1499,6 +1518,18 @@
       "Notes": "Rejection received 2026-07-15 via Gem; application date unknown (no prior confirmation on record); distinct role from the existing Luma rejection (Research Scientist / Engineer)",
       "Next Steps": null,
       "Last Updated": "2026-07-15"
+    },
+    {
+      "Company": "Luma",
+      "Role": "Forward Deployed Engineer",
+      "Date Applied": null,
+      "Status": "Rejected",
+      "Source": "Gem",
+      "Company Size (Employees)": null,
+      "Sector": null,
+      "Notes": "Rejection received 2026-07-23 via Gem; application date unknown (no prior confirmation on record); distinct role from existing Luma rejections (Research Scientist / Engineer and Software Engineer - Product)",
+      "Next Steps": null,
+      "Last Updated": "2026-07-23"
     },
     {
       "Company": "Nasdaq",
